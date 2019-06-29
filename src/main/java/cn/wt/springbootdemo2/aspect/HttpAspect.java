@@ -12,6 +12,6 @@ public class HttpAspect {
     @Before("execution(public * cn.wt.springbootdemo2.controller.*.*(..))")
     public void log(){
 
-        System.out.println("log acpect ..........");
+        System.out.println("log acpect2 ..............");
     }
 }
