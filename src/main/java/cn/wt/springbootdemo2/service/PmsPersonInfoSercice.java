@@ -6,16 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PmsPersonInfoSercice {
-    @Autowired
-    private PmsPersonInfoDao pmsPersonInfoDao;
+public class PmsPersonInfoSercice extends BaseService<PmsPersonInfo,PmsPersonInfoDao> {
 
-    public PmsPersonInfo selectOne(Integer id){
-        return pmsPersonInfoDao.selectOne(id);
-    }
-
-    public boolean save(PmsPersonInfo personInfo){
-        return pmsPersonInfoDao.save(personInfo);
-    }
 
 }

@@ -1,6 +1,6 @@
 package cn.wt.springbootdemo2.entity;
 
-public class PmsPersonInfo {
+public class PmsPersonInfo extends BaseEntity{
 
     private Integer id;
     private String name;

@@ -1,2 +1,41 @@
 server:
   port: 8081
+
+datasourse:
+  url: jdbc:mysql://192.168.100.253:3306/cgw_manage_test?useUnicode=true&amp;characterEncoding=UTF-8
+  username: root
+  password: 000000
+  driver-class-name: com.mysql.jdbc.Driver
+  druid:
+    initialSize: 20
+    minIdle: 5
+    maxActive: 50
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat,wall,log4j
+    logSlowSql: true
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 50
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    remove-abandoned: true
+
+logging:
+  config: classpath:logback-spring.xml
+
+mybatis:
+  type-aliases-package: cn.wt.springbootdemo2.entity
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    cache-enabled: true
+
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql

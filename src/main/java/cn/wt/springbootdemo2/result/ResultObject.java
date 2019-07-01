@@ -58,6 +58,13 @@ public class ResultObject<T> {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "ResultObject{" +
+                "status=" + status +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                ", timestamp=" + timestamp +
+                '}';
+    }
 }
