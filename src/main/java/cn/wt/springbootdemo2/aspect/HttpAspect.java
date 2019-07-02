@@ -32,9 +32,9 @@ public class HttpAspect{
 
         logger.info("url={}",request.getRequestURL());
         logger.info("IP={}",request.getRemoteAddr());
-        logger.info("Method={}",request.getMethod());
+    //    logger.info("Method={}",request.getMethod());
         logger.info("Class.Method={}",joinPoint.getSignature().getDeclaringTypeName()+"."+joinPoint.getSignature().getName());
-        logger.info("Args={}",joinPoint.getArgs());
+    //    logger.info("Args={}",joinPoint.getArgs());
 
 
         logger.info("log acpect before..........");

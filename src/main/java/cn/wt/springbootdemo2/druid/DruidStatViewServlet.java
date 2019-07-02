@@ -21,8 +21,8 @@ import com.alibaba.druid.support.http.StatViewServlet;
 @WebServlet(
         urlPatterns = {"/druid/*"},
         initParams = {
-                @WebInitParam(name = "loginUsername", value = "admin"),
-                @WebInitParam(name = "loginPassword", value = "test"),
+                @WebInitParam(name = "loginUsername", value = "admin1"),
+                @WebInitParam(name = "loginPassword", value = "test1"),
                 @WebInitParam(name = "resetEnable", value = "false")
 //      @WebInitParam(name = "allow", value = "127.0.0.1")
         }

@@ -1,63 +1,62 @@
 package cn.wt.springbootdemo2.entity;
 
-public class PmsPersonInfo extends BaseEntity{
+public class PmsPersonInfo extends BaseEntity {
 
     private Integer id;
-    private String name;
-    private Integer age;
-    private String remark;
+    private String personName;
+    private Integer personNumber;
+    private String adress;
+    private Integer userId;
 
-    public PmsPersonInfo() {
 
+    @Override
+    public String toString() {
+        return "PmsPersonInfo{" +
+                "id=" + id +
+                ", personName='" + personName + '\'' +
+                ", personNumber=" + personNumber +
+                ", adress='" + adress + '\'' +
+                '}';
     }
 
-    public PmsPersonInfo(Integer id, String name, Integer age, String remark) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.remark = remark;
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public Integer getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getPersonName() {
+        return personName;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setPersonName(String personName) {
+        this.personName = personName;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public Integer getPersonNumber() {
+        return personNumber;
     }
 
-    @Override
-    public String toString() {
-        return "PmsPersonInfo{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", remark='" + remark + '\'' +
-                '}';
+    public void setPersonNumber(Integer personNumber) {
+        this.personNumber = personNumber;
     }
 
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
 }

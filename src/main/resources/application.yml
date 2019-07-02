@@ -1,35 +1,36 @@
 server:
   port: 8081
 
-datasourse:
-  url: jdbc:mysql://192.168.100.253:3306/cgw_manage_test?useUnicode=true&amp;characterEncoding=UTF-8
-  username: root
-  password: 000000
-  driver-class-name: com.mysql.jdbc.Driver
-  druid:
-    initialSize: 20
-    minIdle: 5
-    maxActive: 50
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    filters: stat,wall,log4j
-    logSlowSql: true
-    poolPreparedStatements: false
-    maxPoolPreparedStatementPerConnectionSize: 50
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-    remove-abandoned: true
+spring:
+  datasource:
+    url: jdbc:mysql://rm-m5e58b8f9q3214i51jo.mysql.rds.aliyuncs.com:3306/zm_manage?characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=true
+    username: root
+    password: 875207@leacol
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initialSize: 20
+      minIdle: 5
+      maxActive: 50
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      filters: stat,wall,log4j
+      logSlowSql: true
+      poolPreparedStatements: false
+      maxPoolPreparedStatementPerConnectionSize: 50
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      remove-abandoned: true
 
 logging:
   config: classpath:logback-spring.xml
 
 mybatis:
   type-aliases-package: cn.wt.springbootdemo2.entity
-  mapper-locations: classpath:mapper/**/*.xml
+  mapper-locations: classpath:mapper/*.xml
   configuration:
     cache-enabled: true
 

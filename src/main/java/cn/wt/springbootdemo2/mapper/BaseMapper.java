@@ -2,6 +2,7 @@ package cn.wt.springbootdemo2.mapper;
 
 import cn.wt.springbootdemo2.entity.BaseEntity;
 import cn.wt.springbootdemo2.entity.PageView;
+import com.github.pagehelper.Page;
 
 import java.util.List;
 
@@ -26,9 +27,8 @@ public interface BaseMapper<T extends BaseEntity> {
     public List<T> selectList(T t);
 
 
-    public List<T> selectPage(PageView pageView);
+    Page<T> selectPage(T t);
 
 
-    public int total(PageView pageView);
 
 }
