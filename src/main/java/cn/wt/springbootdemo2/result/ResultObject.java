@@ -1,19 +1,27 @@
 package cn.wt.springbootdemo2.result;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class ResultObject<T> {
     private Integer status;
     private String message;
     private T data;
-    private Timestamp timestamp = new  Timestamp(System.currentTimeMillis());
+ //   private Timestamp timestamp = new  Timestamp(System.currentTimeMillis());
+    private String time =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 
 
 
     public ResultObject() {
     }
 
-
+    public ResultObject(Integer status,String message) {
+        super();
+        this.status = status;
+        this.message = message;
+    }
 
     public ResultObject(ResultEnum resultEnum) {
         super();
@@ -22,6 +30,14 @@ public class ResultObject<T> {
     }
 
 
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     public Integer getStatus() {
         return status;
@@ -64,7 +80,7 @@ public class ResultObject<T> {
                 "status=" + status +
                 ", message='" + message + '\'' +
                 ", data=" + data +
-                ", timestamp=" + timestamp +
+                ", time='" + time + '\'' +
                 '}';
     }
 }

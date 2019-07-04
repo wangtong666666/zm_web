@@ -15,4 +15,6 @@ public class ReturnResult {
     public static ResultObject error(ResultEnum resultEnum){
         return new ResultObject(resultEnum);
     }
+
+
 }

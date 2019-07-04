@@ -3,7 +3,7 @@ package cn.wt.springbootdemo2.result;
 
 public enum ResultEnum {
     SUCCESS(200,"处理成功"),
-    NOFIND(0,"无数据"),
+    NOFIND(0,"未查询到相关数据"),
     NOACCESS(403,"服务器拒绝请求"),
     ERROR(500,"服务器内部错误"),
     ERROR_TOKEN(502,"用户Token错误"),

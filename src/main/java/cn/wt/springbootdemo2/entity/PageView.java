@@ -1,26 +1,26 @@
 package cn.wt.springbootdemo2.entity;
 import java.util.List;
 
-public class PageView {
+public class PageView<T> {
 
     // 用户指定/配置
     private int pageNum;// 当前页
     private int pageSize;// 每页显示的记录数量
-    private Object searchBean;  //设置查询对象
+    private T searchBean;  //设置查询对象
     private String order;//排序的顺序(asc,desc)
     private String sort;//排序的字段
 
 
     // 从数据库中查询
     private int recordCount;// 总记录数
-    private List recordList;// 本页的数据列表
+    private List<T> recordList;// 本页的数据列表
 
     private int pageCount;// 总页数
 
 
     //传给dao包进行查询的
 
-    public PageView(int pageNum, int pageSize,String order,String sort,Object searchBean) {
+    public PageView(int pageNum, int pageSize,String order,String sort,T searchBean) {
         this.pageNum = pageNum;
         this.pageSize = pageSize;
         this.order = order;
@@ -71,7 +71,7 @@ public class PageView {
         return searchBean;
     }
 
-    public void setSearchBean(Object searchBean) {
+    public void setSearchBean(T searchBean) {
         this.searchBean = searchBean;
     }
 

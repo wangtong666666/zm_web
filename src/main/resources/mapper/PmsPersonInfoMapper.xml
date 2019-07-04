@@ -32,7 +32,7 @@
     </sql>
 
     <select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.PmsPersonInfo">
-        select A.* from (
+      /*  select A.* from (*/
             SELECT obj.* FROM pms_person_info obj
             <where>
                 <include refid="configParamSql"/>
@@ -42,8 +42,8 @@
             </if>
             <if test="sort==null">
                 order by obj.id desc
-            </if>-->
-        ) A limit #{pageNum},#{pageSize}
+            </if>
+        ) A limit #{pageNum},#{pageSize}-->
 
     </select>
 
@@ -71,6 +71,12 @@
     <select id="selectOne" resultMap="resultMap" parameterType="java.lang.Integer">
         select * from pms_person_info
                 where id=#{id}
+
+    </select>
+
+    <select id="selectOne2" resultMap="resultMap" parameterType="java.lang.Integer">
+        select * from pms_person_info
+        where id=#{id}
 
     </select>
 
