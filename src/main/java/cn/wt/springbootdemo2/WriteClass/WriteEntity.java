@@ -336,7 +336,7 @@ public class WriteEntity {
 	    entity_txt.append("<!DOCTYPE mapper").append("\r\n"); 
 	    entity_txt.append("PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'").append("\r\n"); 
 	    entity_txt.append("'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>").append("\r\n"); 
-	    entity_txt.append("<mapper namespace='"+pak+".dao."+entity_name+"Dao'>").append("\r\n");
+	    entity_txt.append("<mapper namespace='"+package_path+".dao."+entity_name+"Dao'>").append("\r\n");
 	    
 	    entity_txt.append("\r\n"); 
 	    entity_txt.append("\t").append("<resultMap type=\""+type+"\" id=\"resultMap\">").append("\r\n"); 
@@ -345,9 +345,18 @@ public class WriteEntity {
 	    		entity_txt.append("\t\t").append("<id column=\""+pk_name+"\" ").append("property=\""+h_m.getValue()[0][0]+"\" />").append("\r\n"); // 属性信息(id)
 	    		oneval=h_m.getValue()[0][0];
 	    	}else{
-				entity_txt.append("\t\t").append("<result column=\""+h_m.getKey()+"\" ").append("property=\""+h_m.getValue()[0][0]+"\" />").append("\r\n"); // 属性信息
+			//	entity_txt.append("\t\t").append("<result column=\""+h_m.getKey()+"\" ").append("property=\""+h_m.getValue()[0][0]+"\" />").append("\r\n"); // 属性信息
 	    	}
 		}
+		for (Map.Entry<String, String[][]> h_m : hibernate_map.entrySet()) {
+			if(pk_name.equals(h_m.getKey())){
+				/*entity_txt.append("\t\t").append("<id column=\""+pk_name+"\" ").append("property=\""+h_m.getValue()[0][0]+"\" />").append("\r\n"); // 属性信息(id)
+				oneval=h_m.getValue()[0][0];*/
+			}else{
+				entity_txt.append("\t\t").append("<result column=\""+h_m.getKey()+"\" ").append("property=\""+h_m.getValue()[0][0]+"\" />").append("\r\n"); // 属性信息
+			}
+		}
+
 	    entity_txt.append("\t").append("</resultMap>").append("\r\n");
 		entity_txt.append("\r\n");
 		
@@ -412,6 +421,13 @@ public class WriteEntity {
 		}
 		entity_txt.append("\t\t").append("</where>").append("\r\n"); 
 		entity_txt.append("\t").append("</select>").append("\r\n"); 
+		entity_txt.append("\r\n");
+
+
+		//select的sql语句(单个)
+		entity_txt.append("\t").append("<select id=\"selectOne\" resultMap=\"resultMap\" parameterType=\"java.lang.Integer\">").append("\r\n");
+		entity_txt.append("\t\t").append("select * from "+table_name+" where id = #{id}").append("\r\n");
+		entity_txt.append("\t").append("</select>").append("\r\n");
 		entity_txt.append("\r\n");
 
 		
@@ -481,7 +497,6 @@ public class WriteEntity {
 		entity_txt.append("import java.util.Map;").append("\r\n");
 		entity_txt.append("import org.springframework.beans.factory.annotation.Autowired;").append("\r\n");
 		entity_txt.append("import org.springframework.stereotype.Repository;").append("\r\n");
-		entity_txt.append("import ").append("ky.util.PageView").append(";\r\n");
 		entity_txt.append("\r\n");
 
 		// 表注释
@@ -517,7 +532,6 @@ public class WriteEntity {
 		entity_txt.append("import java.util.Map;").append("\r\n");
 		entity_txt.append("import org.springframework.beans.factory.annotation.Autowired;").append("\r\n");
 		entity_txt.append("import org.springframework.stereotype.Repository;").append("\r\n");
-		entity_txt.append("import ").append("ky.util.PageView").append(";\r\n");
 		entity_txt.append("\r\n");
 		
 		// 表注释
@@ -585,92 +599,6 @@ public class WriteEntity {
 	
 	
 
-    //生成service代码
-	private void serviceImpl(String path,String pak) {
-		StringBuffer entity_txt = new StringBuffer("\r\n"); // 要生成的信息
-		String name = entity_name + "ServiceImpl"; // 类名
-		String newFile = locahost + path+name + ".java"; // 要生成的实体类
-		entity_txt.append("package ").append(pak).append(";\r\n"); // 包名
-		entity_txt.append("\r\n");
-	
-		entity_txt.append("import ky.entity."+entity_name+";").append("\r\n"); 
-		entity_txt.append("import ky.dao."+entity_name+"Dao;").append("\r\n"); 
-		entity_txt.append("import ky.service."+entity_name+"Service;").append("\r\n"); 
-		entity_txt.append("import java.util.Date;").append("\r\n"); 
-		entity_txt.append("import java.util.List;").append("\r\n"); 
-		entity_txt.append("import java.util.Map;").append("\r\n"); 
-		entity_txt.append("import org.springframework.beans.factory.annotation.Autowired;").append("\r\n"); 
-		entity_txt.append("import org.springframework.stereotype.Service;").append("\r\n");
-		entity_txt.append("import ky.util.PageView;").append("\r\n");
-		entity_txt.append("\r\n");
-		
-		// 表注释
-		entity_txt.append("/**").append("\r\n");
-		entity_txt.append("* ********************************************************").append("\r\n");
-		entity_txt.append("* @ClassName: ").append(name).append("\r\n");
-		entity_txt.append("* @Description: ").append(comments_table).append("\r\n");
-		entity_txt.append("* @author 生成service类").append("\r\n");
-		entity_txt.append("* @date ").append(new SimpleDateFormat("yyyy-MM-dd aa hh:mm:ss ").format(new Date())).append("\r\n");
-		entity_txt.append("*******************************************************").append("\r\n");
-		entity_txt.append("*/").append("\r\n");
-		
-		entity_txt.append("@Service").append("\r\n");
-		entity_txt.append("public class ").append(name+" extends BaseServiceImpl implements "+entity_name+"Service{").append("\r\n");
-		entity_txt.append("\r\n");
-		
-		entity_txt.append("\t").append("@Autowired").append("\r\n"); 
-		entity_txt.append("\t").append("private "+entity_name+"Dao "+entity_name.toLowerCase()+"Dao;").append("\r\n"); 
-		entity_txt.append("\r\n");
-		
-		entity_txt.append("\t").append("public PageView selectPage(PageView pageView) {").append("\r\n"); 
-		entity_txt.append("\t\t").append("return "+entity_name.toLowerCase()+"Dao.getPageView(pageView);").append("\r\n"); 
-		entity_txt.append("\t").append("}").append("\r\n"); 
-		entity_txt.append("\r\n");
-		
-		entity_txt.append("\t").append("public List<"+entity_name+"> selectList("+entity_name+" obj) {").append("\r\n"); 
-		entity_txt.append("\t\t").append("return "+entity_name.toLowerCase()+"Dao.selectList(obj);").append("\r\n"); 
-		entity_txt.append("\t").append("}").append("\r\n"); 
-		entity_txt.append("\r\n");
-		
-		if(!isTable.equals("VIEW")){
-			entity_txt.append("\t").append("public int update("+entity_name+" obj) {").append("\r\n"); 
-			entity_txt.append("\t\t").append("int param=1;").append("\r\n"); 
-			entity_txt.append("\t\t").append("int param1="+entity_name.toLowerCase()+"Dao.update(obj);").append("\r\n"); 
-			entity_txt.append("\t\t").append("if(param1<1)param=param1;").append("\r\n"); 
-			entity_txt.append("\t\t").append("return param;").append("\r\n"); 
-			entity_txt.append("\t").append("}").append("\r\n"); 
-			entity_txt.append("\r\n");
-			
-			
-			entity_txt.append("\t").append("public int save("+entity_name+" obj){").append("\r\n"); 
-			entity_txt.append("\t\t").append("int param=1;").append("\r\n"); 
-			entity_txt.append("\t\t").append("int param1="+entity_name.toLowerCase()+"Dao.save(obj);").append("\r\n"); 
-			entity_txt.append("\t\t").append("if(param1<1) param=param1;").append("\r\n"); 
-			entity_txt.append("\t\t").append("return param;").append("\r\n"); 
-			entity_txt.append("\t").append("}").append("\r\n"); 
-			
-			
-			entity_txt.append("\t").append("public int delete(String idArray) {").append("\r\n"); 
-			entity_txt.append("\t\t").append("int param=1;").append("\r\n"); 
-			entity_txt.append("\t\t").append("String[] id_Array = idArray.split(\"-\");").append("\r\n"); 
-			entity_txt.append("\t\t").append("if(id_Array.length>1){").append("\r\n"); 
-			entity_txt.append("\t\t\t").append("for (int i = 0; i < id_Array.length; i++) {").append("\r\n"); 
-			entity_txt.append("\t\t\t\t").append("int param1 = "+entity_name.toLowerCase()+"Dao.delete(Integer.parseInt(id_Array[i]));").append("\r\n"); 
-			entity_txt.append("\t\t\t\t").append("if(param1<1) param=param1;").append("\r\n"); 
-			entity_txt.append("\t\t\t").append("}").append("\r\n"); 
-			entity_txt.append("\t\t").append("}else{").append("\r\n"); 
-			entity_txt.append("\t\t\t").append("int param1="+entity_name.toLowerCase()+"Dao.delete(Integer.parseInt(idArray));").append("\r\n"); 
-			entity_txt.append("\t\t\t").append("if(param1<1) param=param1;").append("\r\n"); 
-			entity_txt.append("\t\t").append("}").append("\r\n"); 
-			entity_txt.append("\t\t").append("return param;").append("\r\n"); 
-		    entity_txt.append("\t").append("}").append("\r\n"); 
-		}
-	
-		entity_txt.append("\r\n");
-		entity_txt.append("}").append("\r\n"); // 类结束
-
-		writeEntity(newFile, entity_txt.toString());
-	}
 	
 	
 	

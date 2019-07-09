@@ -44,13 +44,7 @@ public class PmsPersonInfoController {
         return ReturnResult.success(model);
     }
 
-    @PostMapping("/selectOne2")
-    @ResponseBody
-    public ResultObject selectOne2(Integer id){
 
-        PmsPersonInfo model = pmsPersonInfoSercice.selectOne2(id);
-        return ReturnResult.success(model);
-    }
 
 
 

@@ -1,18 +1,14 @@
 package cn.wt.springbootdemo2.service;
 
 import cn.wt.springbootdemo2.entity.BaseEntity;
-import cn.wt.springbootdemo2.entity.PageView;
-import cn.wt.springbootdemo2.entity.PmsPersonInfo;
 import cn.wt.springbootdemo2.exception.RunException;
 import cn.wt.springbootdemo2.mapper.BaseMapper;
-import cn.wt.springbootdemo2.result.ResultEnum;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 

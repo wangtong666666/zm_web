@@ -6,5 +6,4 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface PmsPersonInfoDao extends BaseMapper<PmsPersonInfo> {
-     PmsPersonInfo selectOne2(Integer id);
 }

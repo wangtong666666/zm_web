@@ -8,12 +8,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PmsPersonInfoSercice extends BaseService<PmsPersonInfo,PmsPersonInfoDao> {
-    @Autowired
-    public PmsPersonInfoDao dao2;
-
-    @Transactional
-    public PmsPersonInfo selectOne2(Integer id) {
-        return dao2.selectOne2(id);
-    }
 
 }
