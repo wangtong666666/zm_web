@@ -25,6 +25,19 @@ spring:
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
       remove-abandoned: true
 
+  redis:
+    database:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+        shutdown-timeout: 100
+
 logging:
   config: classpath:logback-spring.xml
 

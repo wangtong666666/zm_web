@@ -1,0 +1,1616 @@
+2019-07-03 11:16:36.814 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 3632 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 11:16:36.816 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 11:16:36.817 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 11:16:36.922 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 11:16:36.922 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 11:16:38.766 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 11:16:38.782 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 11:16:38.793 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 11:16:38.794 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 11:16:38.919 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 11:16:38.919 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1997 ms
+2019-07-03 11:16:40.710 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 11:16:40.758 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 11:16:40.790 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 11:16:40.794 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.919 seconds (JVM running for 6.134)
+2019-07-03 11:18:14.014 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 11:18:14.014 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 11:18:14.031 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2019-07-03 11:18:14.062 [http-nio-8081-exec-1] WARN  org.springframework.web.servlet.PageNotFound - No mapping for POST /pmspersoninfo/selecPage
+2019-07-03 11:22:20.809 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectOne
+2019-07-03 11:22:20.810 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:22:20.812 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectOne
+2019-07-03 11:22:20.812 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:22:29.031 [http-nio-8081-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 11:22:29.063 [http-nio-8081-exec-3] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==>  Preparing: select * from pms_person_info where id=? 
+2019-07-03 11:22:29.173 [http-nio-8081-exec-3] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==> Parameters: null
+2019-07-03 11:22:29.189 [http-nio-8081-exec-3] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - <==      Total: 0
+2019-07-03 11:22:29.198 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:22:29.208 [http-nio-8081-exec-3] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.wt.springbootdemo2.aspect.HttpAspect.result(HttpAspect.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterReturningAdvice.afterReturning(AspectJAfterReturningAdvice.java:66)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$e7b5910e.selectOne(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 11:22:39.104 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectOne
+2019-07-03 11:22:39.104 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:22:39.104 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectOne
+2019-07-03 11:22:39.104 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:22:39.108 [http-nio-8081-exec-4] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==>  Preparing: select * from pms_person_info where id=? 
+2019-07-03 11:22:39.109 [http-nio-8081-exec-4] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==> Parameters: 1(Integer)
+2019-07-03 11:22:39.112 [http-nio-8081-exec-4] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - <==      Total: 0
+2019-07-03 11:22:39.119 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:22:39.119 [http-nio-8081-exec-4] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.wt.springbootdemo2.aspect.HttpAspect.result(HttpAspect.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterReturningAdvice.afterReturning(AspectJAfterReturningAdvice.java:66)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$e7b5910e.selectOne(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 11:23:09.813 [http-nio-8081-exec-5] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectOne
+2019-07-03 11:23:09.813 [http-nio-8081-exec-5] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:23:09.813 [http-nio-8081-exec-5] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectOne
+2019-07-03 11:23:09.814 [http-nio-8081-exec-5] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:23:09.819 [http-nio-8081-exec-5] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==>  Preparing: select * from pms_person_info where id=? 
+2019-07-03 11:23:09.819 [http-nio-8081-exec-5] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==> Parameters: 11(Integer)
+2019-07-03 11:23:09.823 [http-nio-8081-exec-5] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - <==      Total: 1
+2019-07-03 11:23:09.830 [http-nio-8081-exec-5] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:23:09.830 [http-nio-8081-exec-5] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultPmsPersonInfo{id=11, personName='1', personNumber=1, adress='1'}
+2019-07-03 11:23:19.284 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectOne
+2019-07-03 11:23:19.284 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:23:19.284 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectOne
+2019-07-03 11:23:19.284 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:23:19.288 [http-nio-8081-exec-6] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==>  Preparing: select * from pms_person_info where id=? 
+2019-07-03 11:23:19.288 [http-nio-8081-exec-6] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==> Parameters: null
+2019-07-03 11:23:19.291 [http-nio-8081-exec-6] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - <==      Total: 0
+2019-07-03 11:23:19.299 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:23:19.300 [http-nio-8081-exec-6] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.wt.springbootdemo2.aspect.HttpAspect.result(HttpAspect.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterReturningAdvice.afterReturning(AspectJAfterReturningAdvice.java:66)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$e7b5910e.selectOne(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 11:23:22.800 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectOne
+2019-07-03 11:23:22.800 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:23:22.801 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectOne
+2019-07-03 11:23:22.801 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:23:22.803 [http-nio-8081-exec-7] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==>  Preparing: select * from pms_person_info where id=? 
+2019-07-03 11:23:22.803 [http-nio-8081-exec-7] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - ==> Parameters: null
+2019-07-03 11:23:22.813 [http-nio-8081-exec-7] DEBUG c.w.springbootdemo2.dao.PmsPersonInfoDao.selectOne - <==      Total: 0
+2019-07-03 11:23:22.823 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:23:22.824 [http-nio-8081-exec-7] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.wt.springbootdemo2.aspect.HttpAspect.result(HttpAspect.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterReturningAdvice.afterReturning(AspectJAfterReturningAdvice.java:66)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$e7b5910e.selectOne(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 11:23:47.127 [http-nio-8081-exec-8] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:23:47.128 [http-nio-8081-exec-8] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:23:47.128 [http-nio-8081-exec-8] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:23:47.128 [http-nio-8081-exec-8] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:23:47.171 [http-nio-8081-exec-8] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:23:47.175 [http-nio-8081-exec-8] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:23:47.186 [http-nio-8081-exec-8] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:23:47.187 [http-nio-8081-exec-8] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: /* select A.* from (*/ SELECT obj.* FROM pms_person_info obj LIMIT ? 
+2019-07-03 11:23:47.189 [http-nio-8081-exec-8] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 1(Integer)
+2019-07-03 11:23:47.193 [http-nio-8081-exec-8] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 1
+2019-07-03 11:23:47.194 [http-nio-8081-exec-8] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:23:47.194 [http-nio-8081-exec-8] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=1, startRow=0, endRow=1, total=15, pages=15, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:23:47.194}
+2019-07-03 11:23:57.250 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:23:57.250 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:23:57.251 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:23:57.251 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:23:57.252 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:23:57.252 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:23:57.255 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:23:57.256 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: /* select A.* from (*/ SELECT obj.* FROM pms_person_info obj LIMIT ? 
+2019-07-03 11:23:57.256 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 2(Integer)
+2019-07-03 11:23:57.262 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 2
+2019-07-03 11:23:57.263 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:23:57.263 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=2, startRow=0, endRow=2, total=15, pages=8, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:23:57.263}
+2019-07-03 11:24:01.776 [http-nio-8081-exec-10] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:24:01.776 [http-nio-8081-exec-10] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:24:01.776 [http-nio-8081-exec-10] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:24:01.776 [http-nio-8081-exec-10] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:24:01.777 [http-nio-8081-exec-10] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:24:01.778 [http-nio-8081-exec-10] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:24:01.784 [http-nio-8081-exec-10] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:24:01.785 [http-nio-8081-exec-10] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: /* select A.* from (*/ SELECT obj.* FROM pms_person_info obj LIMIT ? 
+2019-07-03 11:24:01.785 [http-nio-8081-exec-10] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 3(Integer)
+2019-07-03 11:24:01.795 [http-nio-8081-exec-10] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 3
+2019-07-03 11:24:01.795 [http-nio-8081-exec-10] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:24:01.796 [http-nio-8081-exec-10] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=3, startRow=0, endRow=3, total=15, pages=5, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:24:01.795}
+2019-07-03 11:25:08.792 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:25:08.792 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:25:08.792 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:25:08.792 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:25:08.799 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:25:08.799 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:25:08.802 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:25:08.803 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: SELECT obj.* FROM pms_person_info obj order by id LIMIT ? 
+2019-07-03 11:25:08.806 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 3(Integer)
+2019-07-03 11:25:08.810 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 3
+2019-07-03 11:25:08.810 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:25:08.810 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=3, startRow=0, endRow=3, total=15, pages=5, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:25:08.81}
+2019-07-03 11:25:09.744 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:25:09.744 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:25:09.744 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:25:09.745 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:25:09.745 [http-nio-8081-exec-3] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:25:09.746 [http-nio-8081-exec-3] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:25:09.749 [http-nio-8081-exec-3] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:25:09.750 [http-nio-8081-exec-3] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: SELECT obj.* FROM pms_person_info obj order by id LIMIT ? 
+2019-07-03 11:25:09.750 [http-nio-8081-exec-3] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 3(Integer)
+2019-07-03 11:25:09.753 [http-nio-8081-exec-3] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 3
+2019-07-03 11:25:09.754 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:25:09.754 [http-nio-8081-exec-3] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=3, startRow=0, endRow=3, total=15, pages=5, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:25:09.754}
+2019-07-03 11:25:10.122 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:25:10.122 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:25:10.122 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:25:10.122 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:25:10.124 [http-nio-8081-exec-4] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:25:10.125 [http-nio-8081-exec-4] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:25:10.128 [http-nio-8081-exec-4] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:25:10.131 [http-nio-8081-exec-4] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: SELECT obj.* FROM pms_person_info obj order by id LIMIT ? 
+2019-07-03 11:25:10.131 [http-nio-8081-exec-4] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 3(Integer)
+2019-07-03 11:25:10.136 [http-nio-8081-exec-4] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 3
+2019-07-03 11:25:10.136 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:25:10.136 [http-nio-8081-exec-4] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=3, startRow=0, endRow=3, total=15, pages=5, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:25:10.136}
+2019-07-03 11:26:11.517 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:26:11.517 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:26:11.517 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:26:11.517 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:26:11.521 [http-nio-8081-exec-6] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:26:11.521 [http-nio-8081-exec-6] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:26:11.523 [http-nio-8081-exec-6] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:26:11.525 [http-nio-8081-exec-6] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: SELECT obj.* FROM pms_person_info obj order by personNumber LIMIT ? 
+2019-07-03 11:26:11.526 [http-nio-8081-exec-6] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 3(Integer)
+2019-07-03 11:26:11.582 [http-nio-8081-exec-6] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:26:11.583 [http-nio-8081-exec-6] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'personNumber' in 'order clause'
+### The error may exist in file [G:\IdeaProjects\springbootdemo2\target\classes\mapper\PmsPersonInfoMapper.xml]
+### The error may involve cn.wt.springbootdemo2.dao.PmsPersonInfoDao.selectPage-Inline
+### The error occurred while setting parameters
+### SQL: SELECT obj.* FROM pms_person_info obj order by personNumber LIMIT ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'personNumber' in 'order clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'personNumber' in 'order clause'] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'personNumber' in 'order clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2501)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:619)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy89.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:136)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy87.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy78.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:144)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:77)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy79.selectPage(Unknown Source)
+	at cn.wt.springbootdemo2.service.BaseService.selectPage(BaseService.java:31)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$25671cd6.selectPage(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage(PmsPersonInfoController.java:33)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$e7b5910e.selectPage(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 11:26:23.269 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:26:23.270 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:26:23.270 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:26:23.270 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:26:23.271 [http-nio-8081-exec-7] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj 
+2019-07-03 11:26:23.271 [http-nio-8081-exec-7] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 
+2019-07-03 11:26:23.276 [http-nio-8081-exec-7] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:26:23.277 [http-nio-8081-exec-7] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: SELECT obj.* FROM pms_person_info obj order by person_number LIMIT ? 
+2019-07-03 11:26:23.278 [http-nio-8081-exec-7] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 3(Integer)
+2019-07-03 11:26:23.282 [http-nio-8081-exec-7] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 3
+2019-07-03 11:26:23.282 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:26:23.282 [http-nio-8081-exec-7] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=3, startRow=0, endRow=3, total=15, pages=5, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:26:23.282}
+2019-07-03 11:33:24.752 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/selectPage
+2019-07-03 11:33:24.752 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:33:24.752 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.selectPage
+2019-07-03 11:33:24.752 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:33:24.760 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==>  Preparing: SELECT count(0) FROM pms_person_info obj WHERE obj.id = ? 
+2019-07-03 11:33:24.761 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - ==> Parameters: 11(Integer)
+2019-07-03 11:33:24.765 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage_COUNT - <==      Total: 1
+2019-07-03 11:33:24.766 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==>  Preparing: SELECT obj.* FROM pms_person_info obj WHERE obj.id = ? order by person_number LIMIT ? 
+2019-07-03 11:33:24.767 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - ==> Parameters: 11(Integer), 3(Integer)
+2019-07-03 11:33:24.770 [http-nio-8081-exec-9] DEBUG c.w.s.dao.PmsPersonInfoDao.selectPage - <==      Total: 1
+2019-07-03 11:33:24.770 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:33:24.770 [http-nio-8081-exec-9] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=Page{count=true, pageNum=1, pageSize=3, startRow=0, endRow=3, total=1, pages=1, reasonable=true, pageSizeZero=false}, timestamp=2019-07-03 11:33:24.77}
+2019-07-03 11:55:35.666 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 13244 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 11:55:35.668 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 11:55:35.669 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 11:55:35.715 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 11:55:35.715 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 11:55:37.383 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 11:55:37.398 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 11:55:37.410 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 11:55:37.410 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 11:55:37.539 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 11:55:37.540 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1825 ms
+2019-07-03 11:55:39.237 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 11:55:39.285 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 11:55:39.317 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 11:55:39.321 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.25 seconds (JVM running for 5.168)
+2019-07-03 11:57:09.689 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 11:57:09.689 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 11:57:09.705 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2019-07-03 11:57:09.810 [http-nio-8081-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'pmsPersonInfo' on field 'personNumber': rejected value [number]; codes [typeMismatch.pmsPersonInfo.personNumber,typeMismatch.personNumber,typeMismatch.java.lang.Integer,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pmsPersonInfo.personNumber,personNumber]; arguments []; default message [personNumber]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Integer' for property 'personNumber'; nested exception is java.lang.NumberFormatException: For input string: "number"]]
+2019-07-03 11:59:07.976 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 12624 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 11:59:07.979 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 11:59:07.980 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 11:59:08.080 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 11:59:08.080 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 11:59:09.776 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 11:59:09.791 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 11:59:09.803 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 11:59:09.803 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 11:59:09.927 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 11:59:09.928 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1848 ms
+2019-07-03 11:59:11.521 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 11:59:11.573 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 11:59:11.610 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 11:59:11.614 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.21 seconds (JVM running for 5.166)
+2019-07-03 11:59:27.344 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 11:59:27.344 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 11:59:27.359 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-07-03 11:59:27.453 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 11:59:27.454 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 11:59:27.456 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 11:59:27.457 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 11:59:35.303 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 11:59:35.346 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 11:59:35.435 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test(String), 1(Integer), null
+2019-07-03 11:59:35.467 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 11:59:35.469 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 11:59:35.477 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 11:59:35.506 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 11:59:35.565 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 11:59:35.566 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=PmsPersonInfo{id=26, personName='test', personNumber=1, adress='地址'}, timestamp=2019-07-03 11:59:35.565}
+2019-07-03 11:59:58.664 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 12740 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 11:59:58.668 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 11:59:58.669 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 11:59:58.780 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 11:59:58.780 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 12:00:00.480 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 12:00:00.495 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 12:00:00.507 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 12:00:00.507 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 12:00:00.634 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 12:00:00.635 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1855 ms
+2019-07-03 12:00:02.253 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 12:00:02.301 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 12:00:02.333 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 12:00:02.337 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.244 seconds (JVM running for 5.183)
+2019-07-03 12:00:13.820 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 12:00:13.820 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 12:00:13.835 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-03 12:00:14.059 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 12:00:14.061 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 12:00:14.063 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 12:00:14.063 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 12:00:21.984 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 12:00:22.023 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 12:00:22.119 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test(String), 1(Integer), null
+2019-07-03 12:00:22.141 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 12:00:22.144 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 12:00:22.154 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 12:00:22.178 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 12:00:22.220 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 12:00:22.234 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:53)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/538597484.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$b06350ea.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$c7ea044f.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 12:02:49.162 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 11880 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 12:02:49.165 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 12:02:49.165 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 12:02:49.252 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 12:02:49.253 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 12:02:50.855 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 12:02:50.870 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 12:02:50.882 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 12:02:50.882 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 12:02:51.008 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 12:02:51.008 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1755 ms
+2019-07-03 12:02:52.615 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 12:02:52.665 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 12:02:52.700 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 12:02:52.704 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.149 seconds (JVM running for 5.086)
+2019-07-03 12:02:57.306 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 12:02:57.306 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 12:02:57.321 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-07-03 12:02:57.414 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 12:02:57.416 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 12:02:57.418 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 12:02:57.418 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 13:42:04.361 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 13:42:04.361 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 13:42:04.361 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 13:42:04.361 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 14:03:15.610 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 14:03:15.655 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 14:03:15.655 [http-nio-8081-exec-2] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 14:03:15.752 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test(String), 1(Integer), null
+2019-07-03 14:03:15.752 [http-nio-8081-exec-2] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test(String), 1(Integer), null
+2019-07-03 14:03:15.778 [http-nio-8081-exec-2] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 14:03:15.780 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 14:03:15.787 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 14:03:15.788 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 14:03:15.789 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 14:03:15.789 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 14:03:15.812 [http-nio-8081-exec-2] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 14:03:15.812 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 14:03:15.844 [http-nio-8081-exec-2] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 14:03:15.854 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 14:03:15.857 [http-nio-8081-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException] with root cause
+java.lang.RuntimeException: null
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:57)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/1663708595.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$24b96e30.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$46e7b202.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 14:03:15.857 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException] with root cause
+java.lang.RuntimeException: null
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:57)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/1663708595.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$24b96e30.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$46e7b202.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 14:04:07.454 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 6780 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 14:04:07.457 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 14:04:07.458 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 14:04:07.569 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 14:04:07.569 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 14:04:09.168 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 14:04:09.183 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 14:04:09.194 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 14:04:09.195 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 14:04:09.319 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 14:04:09.319 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1750 ms
+2019-07-03 14:04:10.890 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 14:04:10.938 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 14:04:10.970 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 14:04:10.973 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.072 seconds (JVM running for 4.979)
+2019-07-03 14:05:05.348 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 14:05:05.348 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 14:05:05.362 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-03 14:05:05.449 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 14:05:05.451 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 14:05:05.453 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 14:05:05.453 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 14:05:13.666 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 14:05:13.701 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 14:05:13.790 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test(String), 2(Integer), null
+2019-07-03 14:05:13.808 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 14:05:13.810 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 14:05:13.818 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 14:05:13.839 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 14:05:13.867 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 14:05:13.879 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException] with root cause
+java.lang.RuntimeException: null
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:58)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/1994740247.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$7a769d59.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$873a2409.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 14:25:19.092 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 4000 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 14:25:19.095 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 14:25:19.096 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 14:25:19.220 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 14:25:19.220 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 14:25:20.818 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 14:25:20.833 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 14:25:20.844 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 14:25:20.844 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 14:25:20.968 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 14:25:20.968 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1747 ms
+2019-07-03 14:25:22.568 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 14:25:22.616 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 14:25:22.648 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 14:25:22.652 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.095 seconds (JVM running for 5.01)
+2019-07-03 14:25:59.608 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 14:25:59.608 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 14:25:59.622 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-03 14:25:59.709 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 14:25:59.711 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 14:25:59.713 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 14:25:59.713 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 14:26:07.959 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 14:26:07.996 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 14:26:08.086 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test(String), 3(Integer), null
+2019-07-03 14:26:08.122 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 14:26:08.124 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 14:26:08.132 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 14:26:08.158 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 14:26:08.211 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 14:26:08.212 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=PmsPersonInfo{id=31, personName='test', personNumber=3, adress='地址'}, timestamp=2019-07-03 14:26:08.211}
+2019-07-03 14:27:10.918 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 9112 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 14:27:10.921 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 14:27:10.922 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 14:27:10.986 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 14:27:10.986 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 14:27:12.640 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 14:27:12.655 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 14:27:12.666 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 14:27:12.667 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 14:27:12.791 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 14:27:12.792 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1805 ms
+2019-07-03 14:27:14.400 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 14:27:14.449 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 14:27:14.481 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 14:27:14.485 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.118 seconds (JVM running for 5.035)
+2019-07-03 14:27:41.151 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 14:27:41.151 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 14:27:41.165 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-03 14:27:41.253 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 14:27:41.255 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 14:27:41.257 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 14:27:41.257 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 14:27:49.462 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 14:27:49.512 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 14:27:49.604 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址3(String), test4(String), 4(Integer), null
+2019-07-03 14:27:49.650 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 14:27:49.653 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 14:27:49.661 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 14:27:49.695 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 14:27:49.762 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 14:27:49.774 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException] with root cause
+java.lang.RuntimeException: null
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:58)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/1496476398.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$80523aab.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$efcacd06.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 15:09:32.535 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 13348 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 15:09:32.591 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 15:09:32.592 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 15:09:32.690 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 15:09:32.690 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 15:09:34.336 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 15:09:34.351 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:09:34.363 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 15:09:34.364 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 15:09:34.491 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 15:09:34.491 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1800 ms
+2019-07-03 15:09:36.113 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 15:09:36.162 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:09:36.196 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 15:09:36.200 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.229 seconds (JVM running for 5.163)
+2019-07-03 15:10:01.611 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 15:10:01.611 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 15:10:01.626 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-07-03 15:10:01.714 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 15:10:01.715 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 15:10:01.717 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 15:10:01.718 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 15:10:10.149 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 15:10:10.190 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 15:10:10.282 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址3(String), test4(String), 4(Integer), null
+2019-07-03 15:10:10.315 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 15:10:10.317 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 15:10:10.325 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 15:10:10.353 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 15:10:10.410 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 15:10:10.422 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.wt.springbootdemo2.exception.RunException: 服务器内部错误] with root cause
+cn.wt.springbootdemo2.exception.RunException: 服务器内部错误
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:60)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/160107243.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$480d5d8f.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$6cacd94a.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 15:11:37.722 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 13368 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 15:11:37.725 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 15:11:37.726 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 15:11:37.819 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 15:11:37.819 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 15:11:39.436 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 15:11:39.452 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:11:39.464 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 15:11:39.465 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 15:11:39.593 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 15:11:39.593 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1774 ms
+2019-07-03 15:11:41.198 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 15:11:41.247 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:11:41.280 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 15:11:41.284 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.156 seconds (JVM running for 5.151)
+2019-07-03 15:12:02.110 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 15:12:02.110 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 15:12:02.124 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-03 15:12:02.212 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 15:12:02.214 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 15:12:02.216 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 15:12:02.216 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 15:12:10.560 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 15:12:10.607 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 15:12:10.697 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址3(String), test4(String), 4(Integer), null
+2019-07-03 15:12:10.736 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 15:12:10.738 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 15:12:10.746 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 15:12:10.783 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 15:12:10.848 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 15:12:10.860 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.wt.springbootdemo2.exception.RunException] with root cause
+cn.wt.springbootdemo2.exception.RunException: null
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:60)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/1013002140.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$9384abdd.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$c638abea.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 15:37:36.591 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 8276 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 15:37:36.595 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 15:37:36.596 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 15:37:36.714 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 15:37:36.715 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 15:37:38.459 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 15:37:38.475 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:37:38.488 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 15:37:38.488 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 15:37:38.621 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 15:37:38.621 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1906 ms
+2019-07-03 15:37:40.296 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 15:37:40.347 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:37:40.382 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 15:37:40.386 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.462 seconds (JVM running for 5.394)
+2019-07-03 15:44:33.837 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 15:44:33.838 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 15:44:33.851 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-07-03 15:44:33.934 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 15:44:33.935 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 15:44:33.937 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 15:44:33.937 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 15:44:42.198 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 15:44:42.231 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 15:44:42.322 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test2(String), 123(Integer), null
+2019-07-03 15:44:42.339 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 15:44:42.341 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 15:44:42.349 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 15:44:42.375 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 15:44:42.417 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 15:44:42.430 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.wt.springbootdemo2.exception.RunException: 空指针异常] with root cause
+cn.wt.springbootdemo2.exception.RunException: 空指针异常
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:60)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/2000396404.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$b396ebf2.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$d356d7d.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 15:49:40.995 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 4972 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 15:49:40.999 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 15:49:41.000 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 15:49:41.091 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 15:49:41.092 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 15:49:42.755 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 15:49:42.771 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:49:42.784 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 15:49:42.784 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 15:49:42.916 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 15:49:42.917 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1825 ms
+2019-07-03 15:49:44.569 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 15:49:44.621 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 15:49:44.654 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 15:49:44.659 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.281 seconds (JVM running for 5.265)
+2019-07-03 15:50:06.784 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 15:50:06.784 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 15:50:06.801 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2019-07-03 15:50:06.893 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 15:50:06.894 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 15:50:06.896 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 15:50:06.896 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 15:50:15.362 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 15:50:15.399 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 15:50:15.491 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test2(String), 123(Integer), null
+2019-07-03 15:50:15.515 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 15:50:15.517 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 15:50:15.526 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 15:50:15.547 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 15:50:15.593 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 15:50:15.606 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.wt.springbootdemo2.exception.RunException: 空指针异常] with root cause
+cn.wt.springbootdemo2.exception.RunException: 空指针异常
+	at cn.wt.springbootdemo2.service.BaseService.save(BaseService.java:66)
+	at cn.wt.springbootdemo2.service.BaseService$$FastClassBySpringCGLIB$$f3fef1bf.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$439/142864020.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.service.PmsPersonInfoSercice$$EnhancerBySpringCGLIB$$6927366a.save(<generated>)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController.save(PmsPersonInfoController.java:46)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$FastClassBySpringCGLIB$$1d95e4ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at cn.wt.springbootdemo2.controller.PmsPersonInfoController$$EnhancerBySpringCGLIB$$93fa451e.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-03 16:32:05.622 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 4968 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 16:32:05.625 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 16:32:05.626 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 16:32:05.789 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 16:32:05.789 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 16:32:07.432 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 16:32:07.447 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 16:32:07.458 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 16:32:07.459 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 16:32:07.865 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 16:32:07.865 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2076 ms
+2019-07-03 16:32:09.506 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 16:32:09.555 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 16:32:09.588 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 16:32:09.592 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.519 seconds (JVM running for 5.423)
+2019-07-03 16:32:57.220 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 16:32:57.220 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 16:32:57.236 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-07-03 16:32:57.326 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 16:32:57.327 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 16:32:57.329 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 16:32:57.330 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 16:33:05.539 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 16:33:05.576 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 16:33:05.668 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test2(String), 123(Integer), null
+2019-07-03 16:33:05.698 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 16:33:05.701 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 16:33:05.709 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 16:33:05.736 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 16:33:05.991 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 16:37:55.306 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 14028 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 16:37:55.335 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 16:37:55.336 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 16:37:55.424 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 16:37:55.424 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 16:37:57.073 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 16:37:57.088 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 16:37:57.100 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 16:37:57.100 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 16:37:57.227 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 16:37:57.227 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1803 ms
+2019-07-03 16:37:58.871 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 16:37:58.921 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 16:37:58.955 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 16:37:58.959 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.213 seconds (JVM running for 5.133)
+2019-07-03 16:39:23.365 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 16:39:23.366 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 16:39:23.380 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-03 16:39:23.470 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 16:39:23.471 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 16:39:23.473 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 16:39:23.473 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 16:39:31.345 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 16:39:31.381 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 16:39:31.472 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test2(String), 123(Integer), null
+2019-07-03 16:39:31.494 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 16:39:31.496 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 16:39:31.504 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 16:39:31.528 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 16:39:31.571 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
+2019-07-03 16:39:31.572 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - resultResultObject{status=200, message='处理成功', data=PmsPersonInfo{id=38, personName='test2', personNumber=123, adress='地址'}, timestamp=2019-07-03 16:39:31.571}
+2019-07-03 16:40:49.038 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Starting Springbootdemo2Application on WT with PID 9524 (G:\IdeaProjects\springbootdemo2\target\classes started by Administrator in G:\IdeaProjects\springbootdemo2)
+2019-07-03 16:40:49.064 [restartedMain] DEBUG cn.wt.springbootdemo2.Springbootdemo2Application - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-03 16:40:49.065 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - No active profile set, falling back to default profiles: default
+2019-07-03 16:40:49.112 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-03 16:40:49.112 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-03 16:40:50.870 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-07-03 16:40:50.887 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-07-03 16:40:50.902 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-03 16:40:50.902 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-03 16:40:51.047 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-03 16:40:51.048 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1936 ms
+2019-07-03 16:40:52.638 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-07-03 16:40:52.682 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-07-03 16:40:52.713 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-07-03 16:40:52.717 [restartedMain] INFO  cn.wt.springbootdemo2.Springbootdemo2Application - Started Springbootdemo2Application in 4.228 seconds (JVM running for 5.138)
+2019-07-03 16:44:13.889 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-03 16:44:13.889 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-03 16:44:13.903 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-07-03 16:44:13.991 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - url=http://192.168.1.152:8081/pmspersoninfo/save
+2019-07-03 16:44:13.992 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - IP=192.168.1.152
+2019-07-03 16:44:13.994 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - Class.Method=cn.wt.springbootdemo2.controller.PmsPersonInfoController.save
+2019-07-03 16:44:13.994 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect before..........
+2019-07-03 16:44:22.247 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-03 16:44:22.296 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==>  Preparing: insert into pms_person_info(id,adress,person_name,person_number,user_id) values(?,?,?,?,?) 
+2019-07-03 16:44:22.403 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - ==> Parameters: null, 地址(String), test2(String), 123(Integer), null
+2019-07-03 16:44:22.438 [http-nio-8081-exec-1] DEBUG cn.wt.springbootdemo2.dao.PmsPersonInfoDao.save - <==    Updates: 1
+2019-07-03 16:44:22.441 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-07-03 16:44:22.450 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - ==> Parameters: 
+2019-07-03 16:44:22.487 [http-nio-8081-exec-1] DEBUG c.w.s.dao.PmsPersonInfoDao.save!selectKey - <==      Total: 1
+2019-07-03 16:44:22.540 [http-nio-8081-exec-1] INFO  cn.wt.springbootdemo2.aspect.HttpAspect - log acpect after..........
