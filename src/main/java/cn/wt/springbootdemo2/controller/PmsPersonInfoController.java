@@ -46,11 +46,6 @@ public class PmsPersonInfoController {
 
 
 
-
-
-
-
-
     @PostMapping("/save")
     @ResponseBody
     public ResultObject save(PmsPersonInfo model){
