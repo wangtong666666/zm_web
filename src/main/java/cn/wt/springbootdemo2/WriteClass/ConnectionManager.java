@@ -8,9 +8,9 @@ import java.sql.ResultSet;
 public class ConnectionManager
 {
 	public static final String DRIVER = "com.mysql.jdbc.Driver";
-	  public static final String URL = "jdbc:mysql://192.168.100.253:3306/CGW_manage_test?useUnicode=true&amp;characterEncoding=UTF-8";
+	  public static final String URL = "jdbc:mysql://rm-m5e58b8f9q3214i51jo.mysql.rds.aliyuncs.com:3306/boot_test?characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=true";
 	  public static final String UID = "root";
-	  public static final String PWD = "000000";
+	  public static final String PWD = "875207@leacol";
   protected Connection conn;
   protected PreparedStatement pstmt;
   protected ResultSet rs;
