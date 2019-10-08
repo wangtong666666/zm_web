@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper
+PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace='cn.wt.springbootdemo2.dao.TSysPermissionDao'>
+
+	<resultMap type="cn.wt.springbootdemo2.entity.TSysPermission" id="resultMap">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="url" property="url" />
+	</resultMap>
+
+	<!-- 公用的判断条 -->
+	<sql id="configParamSql">
+					<if test="name !=null  and  name!=''">
+							and obj.name=#{name}
+						</if>
+					<if test="id !=null  and  id!=0">
+							and obj.id=#{id}
+						</if>
+					<if test="url !=null  and  url!=''">
+							and obj.url=#{url}
+						</if>
+	</sql>
+
+	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysPermission">
+			SELECT * FROM t_sys_permission obj 
+				<where>
+					<include refid="configParamSql"/>
+				</where>
+	</select>
+
+	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysPermission">
+		select * from t_sys_permission
+		<where>
+				<if test="name !=null  and  name!=''">
+				and name=#{name}
+			</if>
+				<if test="id !=null  and  id!=0">
+				and id=#{id}
+			</if>
+				<if test="url !=null  and  url!=''">
+				and url=#{url}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectOne" resultMap="resultMap" parameterType="java.lang.Integer">
+		select * from t_sys_permission where id = #{id}
+	</select>
+
+	<insert id="save" parameterType="cn.wt.springbootdemo2.entity.TSysPermission">
+		<![CDATA[insert into t_sys_permission(name,url)
+		values(#{name,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR})]]>
+	</insert>
+
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from t_sys_permission
+		where id=#{id}
+	</delete>
+
+	<update id='update' parameterType='cn.wt.springbootdemo2.entity.TSysPermission'>
+		update t_sys_permission set
+		name = #{name,jdbcType=VARCHAR},
+		id = #{id,jdbcType=INTEGER},
+		url = #{url,jdbcType=VARCHAR}
+		where id=#{id}
+	</update>
+
+</mapper>
+

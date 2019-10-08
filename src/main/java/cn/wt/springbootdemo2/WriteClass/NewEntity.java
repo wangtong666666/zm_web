@@ -5,7 +5,7 @@ package cn.wt.springbootdemo2.WriteClass;
 public class NewEntity {
 	
   //数据库表名
-  public static String entityName="pms_test_info";
+  public static String entityName="t_sys_role_user";
  
   public static void main(String[] args) {
 	  
