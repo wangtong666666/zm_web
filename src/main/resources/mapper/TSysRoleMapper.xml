@@ -5,9 +5,10 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 <mapper namespace='cn.wt.springbootdemo2.dao.TSysRoleDao'>
 
 	<resultMap type="cn.wt.springbootdemo2.entity.TSysRole" id="resultMap">
+		<result column="id" property="id" />
 		<result column="name" property="name" />
 		<result column="description" property="description" />
-		<result column="id" property="id" />
+
 	</resultMap>
 
 	<!-- 公用的判断条 -->
@@ -56,7 +57,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from t_sys_role
-		where role_id=#{id}
+		where id=#{id}
 	</delete>
 
 	<update id='update' parameterType='cn.wt.springbootdemo2.entity.TSysRole'>
@@ -64,7 +65,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		name = #{name,jdbcType=VARCHAR},
 		description = #{description,jdbcType=VARCHAR},
 		id = #{id,jdbcType=INTEGER}
-		where role_id=#{}
+		where id=#{id}
 	</update>
 
 </mapper>
