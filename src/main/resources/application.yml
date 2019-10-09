@@ -2,6 +2,13 @@ server:
   port: 8082
 
 spring:
+  resources:
+    static-locations: classpath:/resources/,classpath:/public/
+  #thymeleaf:
+   # prefix: classpath:/templates/
+   # mode: HTML
+   # suffix: .html
+
   datasource:
     url: jdbc:mysql://rm-m5e58b8f9q3214i51jo.mysql.rds.aliyuncs.com:3306/boot_test?characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=true
     username: root
