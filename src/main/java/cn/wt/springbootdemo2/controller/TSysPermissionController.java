@@ -45,6 +45,15 @@ public class TSysPermissionController{
 		return ReturnResult.success(list);
 	}
 
+
+	@PostMapping("/findByRoleId")
+	@ResponseBody
+	public ResultObject findByRoleId(Integer roleId){
+
+		List<TSysPermission> list = TSysPermissionSer.findPermissionByRoleId(roleId);
+		return ReturnResult.success(list);
+	}
+
 	@PostMapping("/selectOne")
 	@ResponseBody
 	public ResultObject seleteOne(Integer id){

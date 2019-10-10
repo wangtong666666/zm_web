@@ -4,6 +4,11 @@ package cn.wt.springbootdemo2.dao;
 import cn.wt.springbootdemo2.mapper.BaseMapper;;
 import org.apache.ibatis.annotations.Mapper;;
 import cn.wt.springbootdemo2.entity.TSysPermission;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
+
 /**
 * ********************************************************
 * @ClassName: TSysPermissionDao
@@ -14,6 +19,9 @@ import cn.wt.springbootdemo2.entity.TSysPermission;
 */
 @Mapper
 public interface TSysPermissionDao extends BaseMapper<TSysPermission>{
+
+    @Select("select p.*,rp.role_id from t_sys_role_permission rp left join t_sys_permission p on p.id = rp.permission_id where role_id = #{roleId}")
+    public List<TSysPermission> findPermissionByRoleId(@Param("roleId") Integer roleId);
 
 }
 

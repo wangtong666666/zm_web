@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import java.util.List;
 
 
@@ -82,7 +81,6 @@ public abstract class BaseService<T extends BaseEntity,M extends BaseMapper<T>>{
     public int delete(Integer id) {
         return dao.delete(id);
     }
-
 
 
 }
