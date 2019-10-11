@@ -15,22 +15,25 @@ public class QuickStartTest {
 
     private DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
     private SimpleAccountRealm simpleAccountRealm = new SimpleAccountRealm();
+    private CustomRealm customRealm = new CustomRealm();
 
     @Before
     public void init(){
-        simpleAccountRealm.addAccount("13687629088","123456","admin");
+     /*   simpleAccountRealm.addAccount("13687629088","123456","admin");
         simpleAccountRealm.addAccount("13600000000","123456","student");
+*/
+       // defaultSecurityManager.setRealm(simpleAccountRealm);
+        defaultSecurityManager.setRealm(customRealm);
+        SecurityUtils.setSecurityManager(defaultSecurityManager);
 
-        defaultSecurityManager.setRealm(simpleAccountRealm);
     }
 
 
     @Test
     public void testAuthentication(){
 
-        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken("13600000000","123456");
+        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken("jack","123456");
 
-        SecurityUtils.setSecurityManager(defaultSecurityManager);
         Subject subject = SecurityUtils.getSubject();
 
         try {
@@ -49,6 +52,9 @@ public class QuickStartTest {
             System.out.println("严重的错误");
         }
 
+        System.out.println("是否有对应的角色:"+subject.hasRole("role1"));
+
+        System.out.println("是否有对应的权限:"+subject.isPermitted("video:add"));
 
 
 

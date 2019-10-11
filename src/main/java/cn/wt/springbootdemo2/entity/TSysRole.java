@@ -1,6 +1,7 @@
 
 package cn.wt.springbootdemo2.entity;
-import java.util.Date; 
+import java.util.Date;
+import java.util.List;
 
 /**
 * ********************************************************
@@ -15,6 +16,16 @@ public class TSysRole extends BaseEntity{
 	private String name;		//
 	private String description;		//
 	private Integer id;		//
+	private List<TSysPermission> permissionList;
+
+
+	public List<TSysPermission> getPermissionList() {
+		return permissionList;
+	}
+
+	public void setPermissionList(List<TSysPermission> permissionList) {
+		this.permissionList = permissionList;
+	}
 
 	public String getName() {
 		return this.name;
