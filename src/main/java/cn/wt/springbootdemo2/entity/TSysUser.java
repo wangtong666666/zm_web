@@ -1,6 +1,7 @@
 
 package cn.wt.springbootdemo2.entity;
-import java.util.Date; 
+import java.util.Date;
+import java.util.List;
 
 /**
 * ********************************************************
@@ -17,6 +18,17 @@ public class TSysUser extends BaseEntity{
 	private String userName;		//
 	private Integer id;		//主键id
 	private String createDate;		//创建时间（yyyy-MM-dd HH:mm:ss）
+
+	private List<TSysRole> roleList;
+
+
+	public List<TSysRole> getRoleList() {
+		return roleList;
+	}
+
+	public void setRoleList(List<TSysRole> roleList) {
+		this.roleList = roleList;
+	}
 
 	public String getPassword() {
 		return this.password;

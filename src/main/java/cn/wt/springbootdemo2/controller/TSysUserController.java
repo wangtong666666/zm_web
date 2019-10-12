@@ -28,6 +28,20 @@ public class TSysUserController{
 
 	@Autowired()
 	private TSysUserService TSysUserSer;
+
+
+
+
+	@PostMapping("/findAllUserInfoByUserName")
+	@ResponseBody
+	public ResultObject findAllUserInfoByUserName(TSysUser model){
+		TSysUser user = TSysUserSer.findAllUserInfoByUserName(model.getUserName());
+		return ReturnResult.success(user);
+	}
+
+
+
+
 	@PostMapping("/selectPage")
 	@ResponseBody
 	public ResultObject seletePage(TSysUser model,int page,int rows,String sort,String order){
