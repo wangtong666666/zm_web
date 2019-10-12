@@ -6,6 +6,7 @@ import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import java.util.LinkedHashMap;
@@ -21,16 +22,16 @@ public class ShiroConfig {
 
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 
-        shiroFilterFactoryBean.setSecurityManager(securityManager);
+        shiroFilterFactoryBean.setSecurityManager(securityManager());
 
         //调用需要登录的接口 确没登录时调
-        shiroFilterFactoryBean.setLoginUrl("");
+        shiroFilterFactoryBean.setLoginUrl("/pub/need_login");
 
         //登录成功时调
         shiroFilterFactoryBean.setSuccessUrl("");
 
         //没有权限时调用
-        shiroFilterFactoryBean.setUnauthorizedUrl("");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/pub/not_permit");
 
         //拦截器拦截的路径
         Map<String,String> filterChainDefinitionMap = new LinkedHashMap<>();
@@ -66,7 +67,7 @@ public class ShiroConfig {
     @Bean
     public SecurityManager securityManager(){
 
-        DefaultSecurityManager securityManager = new DefaultSecurityManager();
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
 
         //设置session管理器 前后端不分离无需设置
         securityManager.setSessionManager(sessionManager());
