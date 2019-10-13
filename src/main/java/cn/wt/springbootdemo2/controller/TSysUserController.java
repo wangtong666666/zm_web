@@ -23,7 +23,7 @@ import java.util.List;
 *******************************************************
 */
 @Controller
-@RequestMapping("/tsysuser")
+@RequestMapping("/authc/tsysuser")
 public class TSysUserController{
 
 	@Autowired()

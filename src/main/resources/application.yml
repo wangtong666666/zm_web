@@ -3,7 +3,7 @@ server:
 
 spring:
   resources:
-    static-locations: classpath:/resources/,classpath:/public/
+    static-locations: classpath:/resources/,classpath:/public/,classpath:/static/
   thymeleaf:
     prefix: classpath:/templates/
     mode: HTML

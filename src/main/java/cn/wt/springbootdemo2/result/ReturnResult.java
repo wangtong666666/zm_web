@@ -16,5 +16,12 @@ public class ReturnResult {
         return new ResultObject(resultEnum);
     }
 
+    public static ResultObject falied(String message){
+        return new ResultObject(-1,message);
+    }
+
+
+
+
 
 }

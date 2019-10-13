@@ -13,7 +13,6 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
-import sun.java2d.pipe.SpanShapeRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +64,9 @@ public class CustomRealm extends AuthorizingRealm {
 
         String userName = (String) authenticationToken.getPrincipal();
         TSysUser user =tSysUserService.findAllUserInfoByUserName(userName);
+        if(user == null){
+            return null;
+        }
         if(user.getPassword() == null || "".equals(user.getPassword())){
             return null;
         }
