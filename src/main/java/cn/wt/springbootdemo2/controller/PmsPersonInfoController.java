@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping("/pmspersoninfo")
+@RequestMapping("/admin/pmspersoninfo")
 public class PmsPersonInfoController {
     @Autowired
     private PmsPersonInfoSercice pmsPersonInfoSercice;
