@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Mr.Rainbow·登陆132</title>
+    <title>Mr.Rainbow·登陆</title>
     <link rel="stylesheet" href="layui/css/layui.css" media="all"/>
     <link rel="stylesheet" href="css/login.css" media="all"/>
     <style>
@@ -67,7 +67,7 @@
         <legend>欢迎登陆 - 管理平台</legend>
     </fieldset>
     <div class="layui-row layui-col-space15">
-        <form class="layui-form zyl_pad_01" action="/pub/login">
+        <form class="layui-form zyl_pad_01" >
             <div class="layui-col-sm12 layui-col-md12">
                 <div class="layui-form-item">
                     <input type="text" name="userName" lay-verify="required|userName" autocomplete="off" placeholder="账号" class="layui-input">
@@ -140,7 +140,27 @@
             layer.alert(JSON.stringify(data.field),{
                 title: '最终的提交信息'
             })
-            return false;
+
+            var userName = date.field.userName;
+            var passwood = data.field.password
+
+
+            layui.jquery.ajax({
+                type:"post",
+                url:"http:127.0.0.1:8082/pub/login",
+                data:{"userName":userName,"password":passwood},
+                success:function (msg) {
+                    layer.msg(msg);
+                    return false;
+                },
+                error:function () {
+                    alert("error");
+                }
+            });
+
+
+
+
         });
 
 

@@ -37,7 +37,7 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setLoginUrl("/pub/need_login");
 
         //登录成功时调
-        shiroFilterFactoryBean.setSuccessUrl("/index");
+        shiroFilterFactoryBean.setSuccessUrl("/pub/index");
 
         //没有权限时调用
         shiroFilterFactoryBean.setUnauthorizedUrl("/pub/not_permit");
