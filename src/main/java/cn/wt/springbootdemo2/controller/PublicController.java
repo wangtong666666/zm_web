@@ -1,18 +1,16 @@
 package cn.wt.springbootdemo2.controller;
 
 
+import cn.wt.springbootdemo2.rabbitMQ.FanoutConfig;
+import cn.wt.springbootdemo2.rabbitMQ.FanoutProducer;
 import cn.wt.springbootdemo2.redis.RedisFactoryString;
 import cn.wt.springbootdemo2.result.ResultEnum;
 import cn.wt.springbootdemo2.result.ResultObject;
 import cn.wt.springbootdemo2.result.ReturnResult;
-import org.apache.ibatis.annotations.Result;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
-import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
-import org.apache.shiro.web.session.HttpServletSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,12 +30,23 @@ public class PublicController {
     @Autowired
     private RedisFactoryString redisFactoryString;
 
+    @Autowired
+    private FanoutProducer fanoutProducer;
 
-    @RequestMapping("/need_login")
+
+    @RequestMapping("/sendEmail")
     @ResponseBody
-    public ResultObject needLogin(){
-        return ReturnResult.error(ResultEnum.ERROR_TOKEN);
+    public ResultObject sendEmail(){
+
+        String memo = "helloRabbitMq"+ new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+
+        fanoutProducer.sendRabbitMQ(FanoutConfig.QUEUE_EMAIL,memo);
+
+        return ReturnResult.success();
+
     }
+
+
 
     @RequestMapping("/logout")
     @ResponseBody

@@ -45,6 +45,13 @@ spring:
         min-idle: 0
         shutdown-timeout: 100
 
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /admin_host
+
 logging:
   config: classpath:logback-spring.xml
 
