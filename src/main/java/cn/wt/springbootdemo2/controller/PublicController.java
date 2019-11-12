@@ -66,11 +66,11 @@ public class PublicController {
         return ReturnResult.error(ResultEnum.ERROR_PERMIT);
     }
 
-    @RequestMapping("/index")
-    public String index(){
-        return "index";
+    @RequestMapping("/need_login")
+    @ResponseBody
+    public ResultObject need_login(){
+        return ReturnResult.error(ResultEnum.ERROR_TOKEN);
     }
-
 
 
     @PostMapping("/login")

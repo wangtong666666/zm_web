@@ -67,7 +67,7 @@
         <legend>欢迎登陆 - 管理平台</legend>
     </fieldset>
     <div class="layui-row layui-col-space15">
-        <form class="layui-form zyl_pad_01" >
+        <form class="layui-form zyl_pad_01">
             <div class="layui-col-sm12 layui-col-md12">
                 <div class="layui-form-item">
                     <input type="text" name="userName" lay-verify="required|userName" autocomplete="off" placeholder="账号" class="layui-input">
@@ -141,13 +141,13 @@
                 title: '最终的提交信息'
             })
 
-            var userName = date.field.userName;
+           /* var userName = date.field.userName;
             var passwood = data.field.password
 
 
             layui.jquery.ajax({
                 type:"post",
-                url:"http:127.0.0.1:8082/pub/login",
+                url:"http://127.0.0.1:8082/pub/login",
                 data:{"userName":userName,"password":passwood},
                 success:function (msg) {
                     layer.msg(msg);
@@ -158,7 +158,7 @@
                 }
             });
 
-
+*/
 
 
         });
