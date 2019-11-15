@@ -1,4 +1,4 @@
-package cn.wt.springbootdemo2.config;
+package cn.wt.springbootdemo2.shiro;
 
 
 import org.apache.shiro.session.Session;
@@ -11,6 +11,6 @@ public class CustomSessionIdGenerator implements SessionIdGenerator {
 
     @Override
     public Serializable generateId(Session session) {
-        return  "xdclass"+ UUID.randomUUID().toString().replace("-","");
+        return  "wangtong"+ UUID.randomUUID().toString().replace("-","");
     }
 }

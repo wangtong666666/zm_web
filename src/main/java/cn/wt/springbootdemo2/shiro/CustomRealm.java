@@ -1,4 +1,4 @@
-package cn.wt.springbootdemo2.config;
+package cn.wt.springbootdemo2.shiro;
 
 import cn.wt.springbootdemo2.entity.TSysPermission;
 import cn.wt.springbootdemo2.entity.TSysRole;

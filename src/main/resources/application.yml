@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
 
 spring:
   resources:
@@ -34,7 +34,7 @@ spring:
 
   redis:
     database: 0
-    host: 127.0.0.1
+    host: www.wangtong.space
     port: 6379
     password:
     lettuce:
@@ -46,7 +46,7 @@ spring:
         shutdown-timeout: 100
 
   rabbitmq:
-    host: localhost
+    host: www.wangtong.space
     port: 5672
     username: admin
     password: admin

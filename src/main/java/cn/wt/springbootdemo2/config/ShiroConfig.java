@@ -1,6 +1,10 @@
 package cn.wt.springbootdemo2.config;
 
 
+import cn.wt.springbootdemo2.shiro.CustomRealm;
+import cn.wt.springbootdemo2.shiro.CustomRolesOrAuthorizationFilter;
+import cn.wt.springbootdemo2.shiro.CustomSessionIdGenerator;
+import cn.wt.springbootdemo2.shiro.CustomSessionManager;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.mgt.SessionManager;
@@ -149,7 +153,7 @@ public class ShiroConfig {
      */
     public RedisManager getRedisManager(){
         RedisManager redisManager = new RedisManager();
-        redisManager.setHost("127.0.0.1");
+        redisManager.setHost("www.wangtong.space");
         redisManager.setPort(6379);
 
         return redisManager;

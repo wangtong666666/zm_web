@@ -1,4 +1,4 @@
-package cn.wt.springbootdemo2.config;
+package cn.wt.springbootdemo2.shiro;
 
 import jdk.nashorn.internal.parser.Token;
 import org.apache.shiro.session.mgt.SessionKey;
