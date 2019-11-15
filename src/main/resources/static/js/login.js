@@ -1,15 +1,7 @@
 
 $(function(){
 
-	var SlideVerifyPlug = window.slideVerifyPlug;
-	var slideVerify = new SlideVerifyPlug('#verify-wrap',{ 
-		wrapWidth:'400',//设置 容器的宽度 ，默认为 350 
-        initText:'拖动滑块验证',  //设置  初始的 显示文字
-        sucessText:'验证通过',//设置 验证通过 显示的文字
-        getSucessState:function(res){
-       		//当验证完成的时候 会 返回 res 值 true，只留了这个应该够用了
-       	}
-	});
+
 
 	/* $("#resetBtn").on('click',function(){
 		slideVerify.resetVerify();//可以重置 插件 回到初始状态
@@ -23,66 +15,19 @@ $(function(){
 	var videoUrl = '';
 	var secretKey = '';
 	$(".login").click(function () {
-		if(slideVerify.slideFinishState == false){
-		    $(".hint-msg").html("请拖动滑块进行验证！");
-		    $(".hint").show();
-			return;
-		}
+
 	    $(".login").html("正在登录...");
 	    if (postFlag) {
 	        return false; //如果正在提交则结束
 	    }else {
 	    	//获取登录信息
-	    	postFlag = true;
-	    	login_ajax(Aurl+'login/selectLoginMessage.action',true,"loginName="+$(".IDInputOne").val(),successFun,errorFun);
-	    	function errorFun(data) {
-	    		$(".hint-msg").html("获取登录信息失败！");
-    			$(".hint").show();
-	    		$(".login").html("登录")
-				slideVerify.resetVerify(); 
-                postFlag = false; //传送失败或不是想要的值后，将postFlag重归为false
-	    	}
-	  
-	    	function successFun(data) {
-	    		 if(data.code == 1){
-	    			 localVerify = data.result.localVerify;
-	    			 videoUrl = data.result.videoHttpUrl;
-	    			 /* console.log(videoUrl)
-	    			 alert(videoUrl) */
-	    			 //如果开启本地验证
-	    			 if(localVerify == 1){
-	    			//	 alert(localVerify == 1);
-	    				 //获取登录秘钥
-	    				 login_ajax(videoUrl+'attestation/getAttestation',false,"",successFun2,errorFun2);
-	    				 function successFun2(data) {
-	    		    		 if(data.status == 200){
-	    		    			 secretKey = data.data; //登录秘钥
-	    		    		 }else{
-	    		    			 $(".hint-msg").html(data.message);
-	    		    			 $(".hint").show();
-	    		    			 $(".login").html("登录")
-	    		    			 slideVerify.resetVerify();
-	    		    			 postFlag = false; //传送失败或不是想要的值后，将postFlag重归为false
-	    		    			 return;
-	    		    		 }
-	    				 }
-	    				 function errorFun2(data) {
-	    			    		
-	    			    		$(".hint-msg").html("获取本地登录秘钥失败！");
-	    		    			$(".hint").show();
-	    			    		$(".login").html("登录")
-	    						slideVerify.resetVerify(); 
-	    		                postFlag = false; //传送失败或不是想要的值后，将postFlag重归为false
-	    			    	}
-	    			 }
-	    			 
 	    			 
 	    			 if(postFlag == false){
 	    				 return;
 	    			 }
 	    			 //登录
-	    			 login_ajax(Aurl+'login/main.action',false,"loginName="+$(".IDInputOne").val()+"&loginPwd="+$(".IDInputTwo").val()+"&secretKey="+secretKey,successFun3,errorFun3);
-	    			 function errorFun3(data) {
+	    			 login_ajax(Aurl+'login/main.action',false,"loginName="+$(".IDInputOne").val()+"&loginPwd="+$(".IDInputTwo").val()+"&secretKey="+secretKey,successFun,errorFun);
+	    			 function errorFun(data) {
 						 console.log(data)
 	    		    		$(".hint-msg").html("登录失败！");
 	    	    			$(".hint").show();
@@ -90,36 +35,12 @@ $(function(){
 	    					slideVerify.resetVerify(); 
 	    	                postFlag = false; //传送失败或不是想要的值后，将postFlag重归为false
 	    			 }
-	    			 function successFun3(result) {
+	    			 function successFun(result) {
  		                if (result.code != "0") { //我这里设置result.errorCode == 0为传送成功或获得想要
  		                    $(".login").html("登录") ;
- 		                    localStorage['UsertypeSelect']=JSON.stringify(result);
- 		                	if(result.result.roleKey == 110){
- 		                		window.location.href="/zm/pages/principal/totalAccount.jsp";
- 		                	}else if(result.result.roleKey == 111){
- 		                		window.location.href="/zm/pages/principal/superAccount.jsp";
- 		                	}else if (result.code == "2"){
- 		                		dog();
- 		                		//调查询咨询记录
- 								ajax_datatypeByJsonCon("post", "pmsstudentadvisoryrecord/selectLastStudentRecord.action", "", myfunc02ka50);
- 		                        function myfunc02ka50(only){
- 		                        	if(only.result.length != 0){
- 			                            if (only.result[0].remark==""){
- 			                                window.location.href="/zm/indexMine.jsp";
- 			                            }
- 			                            else {
- 			                               window.location.href="/zm/zixunbiao.jsp";
- 			                            }
- 		                        	}else{
- 		                        		window.location.href="/zm/zixunbiao.jsp";
- 		                        	}
- 		                        }
- 		                		
- 		                		//
- 		                	}else{
- 		                		dog();
+
  		                		window.location.href="/zm/indexMine.jsp";
- 		                	}
+
  		                    
  		                    return false;
  		                }else{
@@ -133,18 +54,6 @@ $(function(){
  		            
     				 }
 	    			 postFlag = true; 
-	    		 }else if(data.code == 0){
-	    			 $(".hint-msg").html(data.msg);
-	    			 $(".hint").show();
-	    			 $(".login").html("登录")
-	    			 slideVerify.resetVerify();
-	    			 postFlag = false; //传送失败或不是想要的值后，将postFlag重归为false
-	    			 return;
-	    		 }
-	    	}
-	    	
-	  
-	  
 	    }
 	        
 	})
