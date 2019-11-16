@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper
+PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace='cn.wt.springbootdemo2.dao.PmsBookInfoDao'>
+
+	<resultMap type="cn.wt.springbootdemo2.entity.PmsBookInfo" id="resultMap">
+		<id column="id" property="id" />
+		<result column="price" property="price" />
+		<result column="name" property="name" />
+		<result column="create_date" property="createDate" />
+		<result column="inventory" property="inventory" />
+		<result column="publish_date" property="publishDate" />
+		<result column="writer_name" property="writerName" />
+	</resultMap>
+
+	<!-- 公用的判断条 -->
+	<sql id="configParamSql">
+					<if test="price !=null  and  price!=''">
+							and obj.price=#{price}
+						</if>
+					<if test="name !=null  and  name!=''">
+							and obj.name=#{name}
+						</if>
+					<if test="id !=null  and  id!=0">
+							and obj.id=#{id}
+						</if>
+					<if test="createDate !=null  and  createDate!=''">
+							and obj.create_date=#{createDate}
+						</if>
+					<if test="inventory !=null  and  inventory!=0">
+							and obj.inventory=#{inventory}
+						</if>
+					<if test="publishDate !=null  and  publishDate!=''">
+							and obj.publish_date=#{publishDate}
+						</if>
+					<if test="writerName !=null  and  writerName!=''">
+							and obj.writer_name=#{writerName}
+						</if>
+	</sql>
+
+	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.PmsBookInfo">
+			SELECT * FROM pms_book_info obj 
+				<where>
+					<include refid="configParamSql"/>
+				</where>
+	</select>
+
+	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.PmsBookInfo">
+		select * from pms_book_info
+		<where>
+				<if test="price !=null  and  price!=''">
+				and price=#{price}
+			</if>
+				<if test="name !=null  and  name!=''">
+				and name=#{name}
+			</if>
+				<if test="id !=null  and  id!=0">
+				and id=#{id}
+			</if>
+				<if test="createDate !=null  and  createDate!=''">
+				and create_date=#{createDate}
+			</if>
+				<if test="inventory !=null  and  inventory!=0">
+				and inventory=#{inventory}
+			</if>
+				<if test="publishDate !=null  and  publishDate!=''">
+				and publish_date=#{publishDate}
+			</if>
+				<if test="writerName !=null  and  writerName!=''">
+				and writer_name=#{writerName}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectOne" resultMap="resultMap" parameterType="java.lang.Integer">
+		select * from pms_book_info where id = #{id}
+	</select>
+
+	<insert id="save" parameterType="cn.wt.springbootdemo2.entity.PmsBookInfo">
+		<![CDATA[insert into pms_book_info(price,name,create_date,inventory,publish_date,writer_name)
+		values(#{price,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR},#{createDate,jdbcType=VARCHAR},#{inventory,jdbcType=INTEGER},#{publishDate,jdbcType=VARCHAR},#{writerName,jdbcType=VARCHAR})]]>
+	</insert>
+
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from pms_book_info
+		where id=#{id}
+	</delete>
+
+	<update id='update' parameterType='cn.wt.springbootdemo2.entity.PmsBookInfo'>
+		update pms_book_info set
+		price = #{price,jdbcType=VARCHAR},
+		name = #{name,jdbcType=VARCHAR},
+		id = #{id,jdbcType=INTEGER},
+		create_date = #{createDate,jdbcType=VARCHAR},
+		inventory = #{inventory,jdbcType=INTEGER},
+		publish_date = #{publishDate,jdbcType=VARCHAR},
+		writer_name = #{writerName,jdbcType=VARCHAR}
+		where id=#{id}
+	</update>
+
+</mapper>
+

@@ -3,6 +3,8 @@ server:
 
 spring:
   resources:
+    chain:
+      cache: false
     static-locations: classpath:/resources/,classpath:/public/,classpath:/static/
   thymeleaf:
     prefix: classpath:/templates/

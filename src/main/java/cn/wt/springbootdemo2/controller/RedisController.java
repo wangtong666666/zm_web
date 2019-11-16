@@ -1,7 +1,6 @@
 package cn.wt.springbootdemo2.controller;
 
 
-import cn.wt.springbootdemo2.entity.PmsPersonInfo;
 import cn.wt.springbootdemo2.redis.RedisFactoryJson;
 import cn.wt.springbootdemo2.redis.RedisFactoryString;
 import cn.wt.springbootdemo2.result.ResultObject;
@@ -36,15 +35,15 @@ public class RedisController {
     @GetMapping("setObject")
     @ResponseBody
     public ResultObject<Object> setObject(){
-        PmsPersonInfo person = new PmsPersonInfo();
+      /*  PmsPersonInfo person = new PmsPersonInfo();
         person.setPersonNumber(1);
         person.setAdress("adress");
         person.setPersonName("name");
         redisTemplateJson.set("json:person",person);
 
-        person = (PmsPersonInfo) redisTemplateJson.get("json:person");
+        person = (PmsPersonInfo) redisTemplateJson.get("json:person");*/
 
-        return ReturnResult.success(person);
+        return ReturnResult.success(null);
     }
 
 }

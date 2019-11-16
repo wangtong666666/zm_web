@@ -1,5 +1,7 @@
 package cn.wt.springbootdemo2.result;
 
+import java.util.ArrayList;
+
 public class ReturnResult {
 
     public static ResultObject success(){
@@ -7,7 +9,13 @@ public class ReturnResult {
     }
 
     public static ResultObject success(Object o){
+
         ResultObject resultObject = new ResultObject(ResultEnum.SUCCESS);
+
+        if(o instanceof ArrayList){
+            resultObject.setCount(((ArrayList) o).size());
+        }
+
         resultObject.setData(o);
         return resultObject;
     }
