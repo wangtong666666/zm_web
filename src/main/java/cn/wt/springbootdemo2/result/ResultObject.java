@@ -11,7 +11,6 @@ public class ResultObject<T> {
     private T data;
  //   private Timestamp timestamp = new  Timestamp(System.currentTimeMillis());
     private String time =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-    private Integer count ;
 
 
     public ResultObject() {
@@ -27,15 +26,6 @@ public class ResultObject<T> {
         super();
         this.status = resultEnum.getStatus();
         this.message = resultEnum.getMessage();
-    }
-
-
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
     }
 
     public String getTime() {

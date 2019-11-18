@@ -35,7 +35,7 @@ public class PmsBookInfoController{
 
 		PageInfo<PmsBookInfo> modelPage = PmsBookInfoSer.selectPage(model,page,limit,sort,order);
 
-		return ReturnResult.success(modelPage.getList());
+		return ReturnResult.success(modelPage);
 	}
 
 	@PostMapping("/selectList")
