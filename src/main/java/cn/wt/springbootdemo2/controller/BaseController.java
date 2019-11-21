@@ -1,12 +1,11 @@
 package cn.wt.springbootdemo2.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import cn.wt.springbootdemo2.entity.TSysUser;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
+
 
 public class BaseController {
-   /* HttpServletRequest request = ServletActionContext.getRequest();
-    HttpServletResponse response = ServletActionContext.getResponse();
-    HttpSession session = this.request.getSession();*/
+
 
 }

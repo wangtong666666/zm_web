@@ -8,6 +8,7 @@ import cn.wt.springbootdemo2.result.ResultObject;
 import cn.wt.springbootdemo2.result.ReturnResult;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,6 +25,7 @@ import java.util.List;
 */
 @Controller
 @RequestMapping("/authc/tsysuser")
+@Validated
 public class TSysUserController{
 
 	@Autowired()

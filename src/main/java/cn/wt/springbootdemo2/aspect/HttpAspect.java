@@ -1,7 +1,6 @@
 package cn.wt.springbootdemo2.aspect;
 
 
-import com.sun.org.apache.bcel.internal.classfile.AttributeReader;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
@@ -9,8 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 
 @Aspect
@@ -22,6 +19,10 @@ public class HttpAspect{
 
     @Pointcut("execution(public * cn.wt.springbootdemo2.controller.*.*(..))")
     public void log(){
+
+    }
+    @Pointcut("execution(public * cn.wt.springbootdemo2.exception.*.*(..))")
+    public void exceptionHandleLog(){
 
     }
 
@@ -37,18 +38,24 @@ public class HttpAspect{
     //    logger.info("Args={}",joinPoint.getArgs());
 
 
-        logger.info("log acpect before..........");
+        /*logger.info("log acpect before..........");*/
     }
 
     @After("log()")
     public void after(){
-        logger.info("log acpect after..........");
+        /*logger.info("log acpect after..........");*/
     }
 
     @AfterReturning(pointcut = "log()",returning = "object")
     public void result(Object object){
         logger.info("result{}",object.toString());
+    }
 
-
+    @AfterReturning(pointcut = "exceptionHandleLog()",returning = "object")
+    public void ExceptionHandleResult(Object object){
+        ServletRequestAttributes attributes = (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = attributes.getRequest();
+        logger.info("url={}",request.getRequestURL());
+        logger.info("result{}",":"+object.toString());
     }
 }

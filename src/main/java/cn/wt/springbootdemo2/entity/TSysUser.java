@@ -1,5 +1,9 @@
 
 package cn.wt.springbootdemo2.entity;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.util.Date;
 import java.util.List;
 
@@ -13,8 +17,13 @@ import java.util.List;
 */
 public class TSysUser extends BaseEntity{
 
+	@NotBlank(message = "密码不能为空！")
+	@Length(min=6,max=18,message = "密码格式不符合要求（6 - 18 位字符）")
 	private String password;		//
 	private String trueName;		//真实姓名
+
+	@NotBlank(message = "用户名不能为空！")
+	@Pattern(regexp = "^[1-9]\\d{10}$",message = "手机号格式不正确！")
 	private String userName;		//
 	private Integer id;		//主键id
 	private String createDate;		//创建时间（yyyy-MM-dd HH:mm:ss）

@@ -1,6 +1,7 @@
 package cn.wt.springbootdemo2.controller;
 
 
+import cn.wt.springbootdemo2.entity.TSysUser;
 import cn.wt.springbootdemo2.rabbitMQ.FanoutConfig;
 import cn.wt.springbootdemo2.rabbitMQ.FanoutProducer;
 import cn.wt.springbootdemo2.redis.RedisFactoryString;
@@ -10,14 +11,17 @@ import cn.wt.springbootdemo2.result.ReturnResult;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.constraints.NotNull;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -25,7 +29,8 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/pub")
-public class PublicController {
+@Validated
+public class PublicController extends BaseController{
 
     @Autowired
     private RedisFactoryString redisFactoryString;
@@ -72,6 +77,18 @@ public class PublicController {
         return ReturnResult.error(ResultEnum.ERROR_TOKEN);
     }
 
+    @RequestMapping("/register")
+    @ResponseBody
+    public ResultObject register(
+            @Validated TSysUser user,
+            @Length(min=6,max=6,message = "验证码格式不正确！") @NotNull(message = "验证码不能为空！") String code
+    ){
+
+
+
+
+        return ReturnResult.success();
+    }
 
     @PostMapping("/login")
     @ResponseBody

@@ -23,7 +23,9 @@ public class ReturnResult {
         return new ResultObject(-1,message);
     }
 
-
+    public static ResultObject param_error(String message){
+        return new ResultObject(513,message);
+    }
 
 
 
