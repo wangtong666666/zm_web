@@ -35,22 +35,6 @@ public class PublicController extends BaseController{
     @Autowired
     private RedisFactoryString redisFactoryString;
 
-    @Autowired
-    private FanoutProducer fanoutProducer;
-
-
-    @RequestMapping("/sendEmail")
-    @ResponseBody
-    public ResultObject sendEmail(){
-
-        String memo = "helloRabbitMq"+ new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-
-        fanoutProducer.sendRabbitMQ(FanoutConfig.QUEUE_EMAIL,memo);
-
-        return ReturnResult.success();
-
-    }
-
 
 
     @RequestMapping("/logout")

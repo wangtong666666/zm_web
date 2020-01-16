@@ -1,9 +1,7 @@
 package cn.wt.springbootdemo2.rabbitMQ;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.FanoutExchange;
-import org.springframework.amqp.core.Queue;
+
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,13 +10,13 @@ import org.springframework.context.annotation.Configuration;
 public class FanoutConfig {
 
     //邮件队列
-    public static final String QUEUE_EMAIL = "fanout.queue.email";
+    public static final String QUEUE_EMAIL = "fanout.queue.email2";
 
     //短信队列
-    private static final String QUEUE_SMS = "fanout.queue.sms";
+    public static final String QUEUE_SMS = "fanout.queue.sms";
 
     //交换机名称
-    private static final String EXCHANGE_NAME = "fanout.exchange";
+    public static final String EXCHANGE_NAME = "fanout.exchange";
 
     //定义邮件队列
     @Bean
