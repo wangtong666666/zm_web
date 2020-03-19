@@ -2,16 +2,16 @@
 <!DOCTYPE mapper
 PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace='cn.wt.springbootdemo2.dao.TSysUserDao'>
+<mapper namespace='cn.wt.zmweb.dao.TSysUserDao'>
 
-	<cache type = "cn.wt.springbootdemo2.redis.MybatisRedisCache">
+	<cache type = "cn.wt.zmweb.redis.MybatisRedisCache">
 		<property name="eviction" value="LRU"/>
 		<property name="flushInterval" value="600000"/>
 		<property name="size" value="1024"/>
 		<property name="readOnly" value="false"/>
 	</cache>
 
-	<resultMap type="cn.wt.springbootdemo2.entity.TSysUser" id="resultMap">
+	<resultMap type="cn.wt.zmweb.entity.TSysUser" id="resultMap">
 		<id column="id" property="id" />
 		<result column="password" property="password" />
 		<result column="true_name" property="trueName" />
@@ -38,14 +38,14 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 						</if>
 	</sql>
 
-	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysUser">
+	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysUser">
 			SELECT * FROM t_sys_user obj 
 				<where>
 					<include refid="configParamSql"/>
 				</where>
 	</select>
 
-	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysUser">
+	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysUser">
 		select * from t_sys_user
 		<where>
 				<if test="password !=null  and  password!=''">
@@ -70,7 +70,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		select * from t_sys_user where id = #{id}
 	</select>
 
-	<insert id="save" parameterType="cn.wt.springbootdemo2.entity.TSysUser">
+	<insert id="save" parameterType="cn.wt.zmweb.entity.TSysUser">
 		<![CDATA[insert into t_sys_user(password,true_name,user_name,create_date)
 		values(#{password,jdbcType=VARCHAR},#{trueName,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR},#{createDate,jdbcType=VARCHAR})]]>
 	</insert>
@@ -80,7 +80,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		where id=#{id}
 	</delete>
 
-	<update id='update' parameterType='cn.wt.springbootdemo2.entity.TSysUser'>
+	<update id='update' parameterType='cn.wt.zmweb.entity.TSysUser'>
 		update t_sys_user set
 		password = #{password,jdbcType=VARCHAR},
 		true_name = #{trueName,jdbcType=VARCHAR},

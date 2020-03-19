@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.wt</groupId>
-    <artifactId>springbootdemo2</artifactId>
+    <artifactId>zm_web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springbootdemo2</name>
+    <name>zm_web</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -121,6 +121,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <!-- Dubbo Spring Boot Starter -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.7.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.7.5</version>
         </dependency>
 
     </dependencies>

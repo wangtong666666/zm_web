@@ -1,7 +1,9 @@
 server:
-  port: 8084
+  port: 2080
 
 spring:
+  application:
+      name: dubbo-auto-configure-consumer-sample
   resources:
     chain:
       cache: false

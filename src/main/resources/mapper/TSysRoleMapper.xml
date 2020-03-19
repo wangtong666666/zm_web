@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace='cn.wt.springbootdemo2.dao.TSysRoleDao'>
+<mapper namespace='cn.wt.zmweb.dao.TSysRoleDao'>
 
-	<resultMap type="cn.wt.springbootdemo2.entity.TSysRole" id="resultMap">
+	<resultMap type="cn.wt.zmweb.entity.TSysRole" id="resultMap">
 		<result column="id" property="id" />
 		<result column="name" property="name" />
 		<result column="description" property="description" />
@@ -24,14 +24,14 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 						</if>
 	</sql>
 
-	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysRole">
+	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysRole">
 			SELECT * FROM t_sys_role obj 
 				<where>
 					<include refid="configParamSql"/>
 				</where>
 	</select>
 
-	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysRole">
+	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysRole">
 		select * from t_sys_role
 		<where>
 				<if test="name !=null  and  name!=''">
@@ -50,7 +50,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		select * from t_sys_role where id = #{id}
 	</select>
 
-	<insert id="save" parameterType="cn.wt.springbootdemo2.entity.TSysRole">
+	<insert id="save" parameterType="cn.wt.zmweb.entity.TSysRole">
 		<![CDATA[insert into t_sys_role(name,description,id)
 		values(#{name,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},#{id,jdbcType=INTEGER})]]>
 	</insert>
@@ -60,7 +60,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		where id=#{id}
 	</delete>
 
-	<update id='update' parameterType='cn.wt.springbootdemo2.entity.TSysRole'>
+	<update id='update' parameterType='cn.wt.zmweb.entity.TSysRole'>
 		update t_sys_role set
 		name = #{name,jdbcType=VARCHAR},
 		description = #{description,jdbcType=VARCHAR},

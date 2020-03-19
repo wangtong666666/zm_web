@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace='cn.wt.springbootdemo2.dao.PmsBookInfoDao'>
+<mapper namespace='cn.wt.zmweb.dao.PmsBookInfoDao'>
 
-	<resultMap type="cn.wt.springbootdemo2.entity.PmsBookInfo" id="resultMap">
+	<resultMap type="cn.wt.zmweb.entity.PmsBookInfo" id="resultMap">
 		<id column="id" property="id" />
 		<result column="price" property="price" />
 		<result column="name" property="name" />
@@ -39,14 +39,14 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 						</if>
 	</sql>
 
-	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.PmsBookInfo">
+	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.PmsBookInfo">
 			SELECT * FROM pms_book_info obj 
 				<where>
 					<include refid="configParamSql"/>
 				</where>
 	</select>
 
-	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.PmsBookInfo">
+	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.PmsBookInfo">
 		select * from pms_book_info
 		<where>
 				<if test="price !=null  and  price!=''">
@@ -77,7 +77,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		select * from pms_book_info where id = #{id}
 	</select>
 
-	<insert id="save" parameterType="cn.wt.springbootdemo2.entity.PmsBookInfo">
+	<insert id="save" parameterType="cn.wt.zmweb.entity.PmsBookInfo">
 		<![CDATA[insert into pms_book_info(price,name,create_date,inventory,publish_date,writer_name)
 		values(#{price,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR},#{createDate,jdbcType=VARCHAR},#{inventory,jdbcType=INTEGER},#{publishDate,jdbcType=VARCHAR},#{writerName,jdbcType=VARCHAR})]]>
 	</insert>
@@ -87,7 +87,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		where id=#{id}
 	</delete>
 
-	<update id='update' parameterType='cn.wt.springbootdemo2.entity.PmsBookInfo'>
+	<update id='update' parameterType='cn.wt.zmweb.entity.PmsBookInfo'>
 		update pms_book_info set
 		price = #{price,jdbcType=VARCHAR},
 		name = #{name,jdbcType=VARCHAR},

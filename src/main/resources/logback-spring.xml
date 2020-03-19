@@ -49,7 +49,7 @@
         </filter>
     </appender>
 
-    <logger name="cn.wt.springbootdemo2" level="debug"/>
+    <logger name="cn.wt.zmweb" level="debug"/>
 
     <!-- log4jdbc-->
     <logger name="jdbc.sqltiming" level="debug"></logger>

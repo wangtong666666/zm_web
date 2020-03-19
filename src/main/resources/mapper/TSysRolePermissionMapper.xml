@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace='cn.wt.springbootdemo2.dao.TSysRolePermissionDao'>
+<mapper namespace='cn.wt.zmweb.dao.TSysRolePermissionDao'>
 
-	<resultMap type="cn.wt.springbootdemo2.entity.TSysRolePermission" id="resultMap">
+	<resultMap type="cn.wt.zmweb.entity.TSysRolePermission" id="resultMap">
 		<id column="id" property="id" />
 		<result column="role_id" property="roleId" />
 		<result column="permission_id" property="permissionId" />
@@ -23,14 +23,14 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 						</if>
 	</sql>
 
-	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysRolePermission">
+	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysRolePermission">
 			SELECT * FROM t_sys_role_permission obj 
 				<where>
 					<include refid="configParamSql"/>
 				</where>
 	</select>
 
-	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysRolePermission">
+	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysRolePermission">
 		select * from t_sys_role_permission
 		<where>
 				<if test="roleId !=null  and  roleId!=0">
@@ -49,7 +49,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		select * from t_sys_role_permission where id = #{id}
 	</select>
 
-	<insert id="save" parameterType="cn.wt.springbootdemo2.entity.TSysRolePermission">
+	<insert id="save" parameterType="cn.wt.zmweb.entity.TSysRolePermission">
 		<![CDATA[insert into t_sys_role_permission(role_id,permission_id)
 		values(#{roleId,jdbcType=INTEGER},#{permissionId,jdbcType=INTEGER})]]>
 	</insert>
@@ -59,7 +59,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		where id=#{id}
 	</delete>
 
-	<update id='update' parameterType='cn.wt.springbootdemo2.entity.TSysRolePermission'>
+	<update id='update' parameterType='cn.wt.zmweb.entity.TSysRolePermission'>
 		update t_sys_role_permission set
 		role_id = #{roleId,jdbcType=INTEGER},
 		id = #{id,jdbcType=INTEGER},

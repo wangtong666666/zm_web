@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace='cn.wt.springbootdemo2.dao.TSysPermissionDao'>
+<mapper namespace='cn.wt.zmweb.dao.TSysPermissionDao'>
 
-	<resultMap type="cn.wt.springbootdemo2.entity.TSysPermission" id="resultMap">
+	<resultMap type="cn.wt.zmweb.entity.TSysPermission" id="resultMap">
 		<id column="id" property="id" />
 		<result column="name" property="name" />
 		<result column="url" property="url" />
@@ -23,14 +23,14 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 						</if>
 	</sql>
 
-	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysPermission">
+	<select id="selectPage" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysPermission">
 			SELECT * FROM t_sys_permission obj 
 				<where>
 					<include refid="configParamSql"/>
 				</where>
 	</select>
 
-	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.springbootdemo2.entity.TSysPermission">
+	<select id="selectList" resultMap="resultMap" parameterType="cn.wt.zmweb.entity.TSysPermission">
 		select * from t_sys_permission
 		<where>
 				<if test="name !=null  and  name!=''">
@@ -49,7 +49,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		select * from t_sys_permission where id = #{id}
 	</select>
 
-	<insert id="save" parameterType="cn.wt.springbootdemo2.entity.TSysPermission">
+	<insert id="save" parameterType="cn.wt.zmweb.entity.TSysPermission">
 		<![CDATA[insert into t_sys_permission(name,url)
 		values(#{name,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR})]]>
 	</insert>
@@ -59,7 +59,7 @@ PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 		where id=#{id}
 	</delete>
 
-	<update id='update' parameterType='cn.wt.springbootdemo2.entity.TSysPermission'>
+	<update id='update' parameterType='cn.wt.zmweb.entity.TSysPermission'>
 		update t_sys_permission set
 		name = #{name,jdbcType=VARCHAR},
 		id = #{id,jdbcType=INTEGER},
